@@ -1,7 +1,7 @@
 # README
 
 ## Issue
-my spree dumps deface error, such as:
+My spree dumps include of some deface error, such as:
 
 ```
 Deface: 1 overrides found for 'spree/shared/_nav_bar'
