@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e9de"/><stop offset="1" stop-color="#ddd0bd"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#86bfa8"/><stop offset="0.42" stop-color="#c8ecdd"/><stop offset="1" stop-color="#7cb49d"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8ecdd"/><stop offset="0.55" stop-color="#86bfa8"/><stop offset="1" stop-color="#7cb49d"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#2f4a40" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="840" rx="170" ry="26" fill="#000" opacity="0.15"/>
+  <rect x="428" y="160" width="168" height="460" rx="38" fill="#ffffff" fill-opacity="0.32" stroke="#ffffff" stroke-opacity="0.85" stroke-width="5"/>
+  <rect x="442" y="250" width="140" height="356" rx="28" fill="#e7849c"/>
+  <path d="M442 286 Q512 262 582 286 V290 H442 Z" fill="#f2a9ba"/>
+  <g fill="#c84a68"><circle cx="478" cy="360" r="10"/><circle cx="540" cy="420" r="8"/><circle cx="500" cy="500" r="11"/><circle cx="560" cy="540" r="8"/></g>
+  <rect x="446" y="180" width="14" height="420" rx="7" fill="#fff" opacity="0.5"/>
+  <g stroke="#fff" stroke-width="4" opacity="0.8"><path d="M570 300 H586 M570 360 H586 M570 420 H586 M570 480 H586"/></g>
+  <rect x="418" y="604" width="188" height="52" rx="12" fill="#5f957f"/>
+  <path d="M398 656 H626 L640 800 Q642 826 616 826 H408 Q382 826 384 800 Z" fill="url(#b)"/>
+  <circle cx="512" cy="742" r="26" fill="#f4f4f4"/><circle cx="512" cy="742" r="10" fill="#c8ecdd" opacity="0.7"/>
+
+</svg>

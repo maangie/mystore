@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f0f3"/><stop offset="1" stop-color="#c8dae2"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#202023"/><stop offset="0.42" stop-color="#4a4a50"/><stop offset="1" stop-color="#19191c"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a50"/><stop offset="0.55" stop-color="#202023"/><stop offset="1" stop-color="#19191c"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#d8d8dc" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="840" rx="170" ry="26" fill="#000" opacity="0.15"/>
+  <g filter="url(#blur)" fill="#ffffff" opacity="0.85"><circle cx="500" cy="230" r="46"/><circle cx="540" cy="170" r="56"/><circle cx="490" cy="120" r="48"/></g>
+  <path d="M404 690 Q380 440 512 330 Q644 440 620 690 Z" fill="#ffffff" fill-opacity="0.32" stroke="#ffffff" stroke-opacity="0.85" stroke-width="5"/>
+  <path d="M414 690 Q400 520 440 470 H584 Q624 520 610 690 Z" fill="#8fcbe6" opacity="0.6"/>
+  <rect x="486" y="282" width="52" height="58" rx="16" fill="url(#b)"/>
+  <rect x="378" y="684" width="268" height="142" rx="46" fill="url(#b)"/>
+  <circle cx="512" cy="756" r="22" fill="#3c3c42"/><circle cx="512" cy="756" r="8" fill="#7fd0f0"/>
+
+</svg>
