@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f0f3"/><stop offset="1" stop-color="#c8dae2"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9d9dc"/><stop offset="0.42" stop-color="#fbfbfb"/><stop offset="1" stop-color="#cdcdd1"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfb"/><stop offset="0.55" stop-color="#d9d9dc"/><stop offset="1" stop-color="#cdcdd1"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#3a3a3e" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="836" rx="190" ry="26" fill="#000" opacity="0.15"/>
+  <ellipse cx="512" cy="812" rx="170" ry="34" fill="#b4b4b9"/>
+  <ellipse cx="512" cy="802" rx="170" ry="30" fill="url(#b)"/>
+  <rect x="448" y="120" width="128" height="690" rx="64" fill="url(#b)"/>
+  <rect x="470" y="240" width="84" height="500" rx="42" fill="#b4b4b9"/>
+  <g stroke="#fbfbfb" stroke-width="5" opacity="0.6"><path d="M478 270 H546"/><path d="M478 290 H546"/><path d="M478 310 H546"/><path d="M478 330 H546"/><path d="M478 350 H546"/><path d="M478 370 H546"/><path d="M478 390 H546"/><path d="M478 410 H546"/><path d="M478 430 H546"/><path d="M478 450 H546"/><path d="M478 470 H546"/><path d="M478 490 H546"/><path d="M478 510 H546"/><path d="M478 530 H546"/><path d="M478 550 H546"/><path d="M478 570 H546"/><path d="M478 590 H546"/><path d="M478 610 H546"/><path d="M478 630 H546"/><path d="M478 650 H546"/><path d="M478 670 H546"/><path d="M478 690 H546"/><path d="M478 710 H546"/></g>
+  <g fill="#2c2c30"><circle cx="512" cy="160" r="12"/><circle cx="512" cy="196" r="8" opacity="0.7"/></g>
+  <rect x="460" y="140" width="12" height="640" rx="6" fill="#fff" opacity="0.2"/>
+
+</svg>

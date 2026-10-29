@@ -60,6 +60,8 @@ bin/rails products:illustrations       # db/data/product_images の画像で商�
   写真（`.png` `.jpg` `.webp`）も置ける。ドリップコーヒーメーカーとエアフライヤーの写真は、
   `-matte-black.webp` が元の写真で、ほかの色は元の写真の本体部分を ImageMagick で塗り替えて作った
   （色は商品のバリアントの色の名前。`products:link_color_images` が、その名前の画像をその色に結びつける）
+- 写真のないサンプル商品には、すべて色ごとの SVG のイラストを置いてある。そのため `illustrations` を実行すれば、
+  仮の画像の商品は残らない
 
 ## 起動
 

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eee9f3"/><stop offset="1" stop-color="#d6cce3"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9d9dc"/><stop offset="0.42" stop-color="#fbfbfb"/><stop offset="1" stop-color="#cdcdd1"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfb"/><stop offset="0.55" stop-color="#d9d9dc"/><stop offset="1" stop-color="#cdcdd1"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#3a3a3e" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="840" rx="300" ry="26" fill="#000" opacity="0.15"/>
+  <g filter="url(#blur)" fill="#fff" opacity="0.9"><circle cx="230" cy="790" r="40"/><circle cx="190" cy="740" r="46"/><circle cx="240" cy="690" r="36"/></g>
+  <g transform="translate(196 812) scale(1.45)"><path d="M0 0 Q26 -40 110 -58 H420 Q440 -58 440 -38 V0 Z" fill="url(#stv)"/>
+  <path d="M24 -50 Q70 -122 210 -134 H420 Q440 -134 440 -114 V-56 H24 Z" fill="url(#bv)"/>
+  <path d="M64 -56 Q96 -116 210 -126 H300 Q270 -76 214 -56 Z" fill="#4f8fd0"/>
+  <path d="M176 -132 C186 -214 244 -236 320 -236 H418 Q446 -236 446 -208 V-132 H402 V-194 H330 C284 -194 254 -172 236 -132 Z" fill="url(#bv)"/>
+  <path d="M330 -236 H418 Q446 -236 446 -208 V-196 H330 Z" fill="#4f8fd0"/>
+  <circle cx="300" cy="-150" r="18" fill="#4f8fd0"/>
+  <path d="M40 -60 Q80 -110 170 -122 L180 -64 Z" fill="#9fd0e6" opacity="0.55"/>
+  </g>
+
+</svg>
