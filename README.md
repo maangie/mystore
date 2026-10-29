@@ -49,14 +49,16 @@ bin/rails translations:import_ja       # 商品名・説明・カテゴリなど
 bin/rails markets:japan                # 日本を JPY の市場にし、円の価格を作る
 bin/rails option_values:set_colors     # 色の選択肢に見本の色を入れる（db/data/option_value_colors.yml）
 bin/rails products:placeholder_images  # 画像のない商品に、商品名入りの仮の画像を付ける
-bin/rails products:illustrations       # db/data/product_images の SVG から商品画像を作り、色ごとに結びつける
+bin/rails products:illustrations       # db/data/product_images の画像で商品画像を差し替え、色ごとに結びつける
 ```
 
 - `markets:japan` は `JPY_RATE` で 1 USD あたりの円を指定できる（省略時は 150）。すでにある円の価格には触らない
 - `products:placeholder_images` と `products:illustrations` は `rsvg-convert` が要る（`brew install librsvg`）。
-  `placeholder_images` は画像のない商品だけが対象。`illustrations` は SVG のある商品の画像を作り直す。
+  `placeholder_images` は画像のない商品だけが対象。`illustrations` は db/data/product_images に画像のある商品の画像を作り直す。
   実行する順は `placeholder_images` → `illustrations` のどちらでもよい
-- 色を変えて画像を変えたい商品は、`db/data/product_images/<商品の slug>-<色>.svg` を置いて `products:illustrations` を実行する
+- 色を変えて画像を変えたい商品は、`db/data/product_images/<商品の slug>-<色>.svg` を置いて `products:illustrations` を実行する。
+  写真（`.png` `.jpg` `.webp`）も置ける。ドリップコーヒーメーカーとエアフライヤーの写真は、
+  `-matte-black.webp` が元の写真で、ほかの色は元の写真の本体部分を ImageMagick で塗り替えて作った
   （色は商品のバリアントの色の名前。`products:link_color_images` が、その名前の画像をその色に結びつける）
 
 ## 起動
