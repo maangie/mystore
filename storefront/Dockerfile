@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-# Multi-stage build for Next.js 16 (standalone output) on Node.js 22 (Alpine).
+# Multi-stage build for Next.js 16 (standalone output) on Node.js 26 (Alpine).
 #
 # Build (Spree env required: pages are prerendered against the Spree API at build time):
 #   docker build \
@@ -23,7 +23,7 @@
 #     --secret id=sentry_auth_token,env=SENTRY_AUTH_TOKEN \
 #     -t storefront .
 
-ARG NODE_VERSION=22-alpine
+ARG NODE_VERSION=26-alpine
 
 
 # ---- base: Node with pnpm (same version as package.json's `packageManager`) ----
