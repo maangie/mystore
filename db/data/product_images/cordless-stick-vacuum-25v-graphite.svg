@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaefe3"/><stop offset="1" stop-color="#d0dbc2"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#35383d"/><stop offset="0.42" stop-color="#64686e"/><stop offset="1" stop-color="#2e3135"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#64686e"/><stop offset="0.55" stop-color="#35383d"/><stop offset="1" stop-color="#2e3135"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#e0e2e4" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="840" rx="220" ry="26" fill="#000" opacity="0.15"/>
+  <path d="M342 830 Q342 764 410 764 H630 Q690 764 690 808 V830 Z" fill="url(#b)"/>
+  <rect x="370" y="804" width="250" height="18" rx="9" fill="#2a2a2d"/>
+  <rect x="392" y="776" width="200" height="10" rx="5" fill="#8a8e94"/>
+  <circle cx="512" cy="764" r="26" fill="#222428"/>
+  <rect x="500" y="380" width="24" height="390" rx="10" fill="url(#st)"/>
+  <rect x="432" y="210" width="100" height="210" rx="34" fill="#ffffff" fill-opacity="0.32" stroke="#ffffff" stroke-opacity="0.85" stroke-width="5"/>
+  <rect x="440" y="340" width="84" height="72" rx="24" fill="#a0968a" opacity="0.5"/>
+  <rect x="432" y="236" width="100" height="20" fill="#8a8e94" opacity="0.8"/>
+  <rect x="514" y="180" width="104" height="170" rx="46" fill="url(#b)"/>
+  <circle cx="566" cy="230" r="24" fill="#8a8e94"/>
+  <path d="M600 196 Q604 108 672 108 Q726 108 726 170 V330" fill="none" stroke="#35383d" stroke-width="32" stroke-linecap="round"/>
+  <rect x="604" y="236" width="112" height="144" rx="24" fill="#222428"/>
+  <rect x="620" y="256" width="12" height="104" rx="6" fill="#8a8e94" opacity="0.8"/>
+
+</svg>

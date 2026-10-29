@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f0f3"/><stop offset="1" stop-color="#c8dae2"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#202023"/><stop offset="0.42" stop-color="#4a4a50"/><stop offset="1" stop-color="#19191c"/></linearGradient>
+    <linearGradient id="bv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a50"/><stop offset="0.55" stop-color="#202023"/><stop offset="1" stop-color="#19191c"/></linearGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8e8e92"/><stop offset="0.5" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <linearGradient id="stv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e6e8"/><stop offset="1" stop-color="#86868a"/></linearGradient>
+    <pattern id="holes" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4.5" fill="#d8d8dc" opacity="0.32"/></pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="512" cy="840" rx="170" ry="26" fill="#000" opacity="0.15"/>
+  <rect x="386" y="150" width="252" height="676" rx="56" fill="url(#b)"/>
+  <rect x="410" y="168" width="204" height="40" rx="20" fill="#0f0f11"/>
+  <g stroke="#3c3c42" stroke-width="5" opacity="0.5"><path d="M428 180 H596 M428 196 H596"/></g>
+  <rect x="452" y="250" width="120" height="60" rx="14" fill="#3c3c42"/>
+  <circle cx="482" cy="280" r="14" fill="none" stroke="#5fd38a" stroke-width="5"/><rect x="506" y="272" width="48" height="16" rx="8" fill="#4a4a50" opacity="0.7"/>
+  <g stroke="#d8d8dc" stroke-width="8" stroke-linecap="round" opacity="0.3"><path d="M424 370 V780"/><path d="M446 370 V780"/><path d="M468 370 V780"/><path d="M490 370 V780"/><path d="M512 370 V780"/><path d="M534 370 V780"/><path d="M556 370 V780"/><path d="M578 370 V780"/><path d="M600 370 V780"/></g>
+  <rect x="404" y="180" width="16" height="620" rx="8" fill="#fff" opacity="0.18"/>
+
+</svg>
