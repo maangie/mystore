@@ -34,6 +34,8 @@ interface MediaGalleryProps {
   images: Media[];
   productName: string;
   activeIndex?: number | null;
+  /** Called when the shopper picks an image (thumbnail, swipe or lightbox). */
+  onImageSelect?: (image: Media) => void;
 }
 
 /** Prefer pre-sized Spree media URLs over the full-resolution original,
@@ -58,6 +60,7 @@ function MediaGalleryInner({
   images,
   productName,
   activeIndex,
+  onImageSelect,
 }: MediaGalleryProps) {
   const t = useTranslations("products");
   const [selectedIndex, setSelectedIndex] = useState(activeIndex ?? 0);
@@ -103,8 +106,10 @@ function MediaGalleryInner({
           : (safeIndex - 1 + images.length) % images.length;
       setSelectedIndex(nextIndex);
       setMainImageErrorUrl(null);
+      const nextImage = images[nextIndex];
+      if (nextImage) onImageSelect?.(nextImage);
     },
-    [images.length, safeIndex],
+    [images, safeIndex, onImageSelect],
   );
 
   if (images.length === 0) {
@@ -120,9 +125,15 @@ function MediaGalleryInner({
     );
   }
 
-  const selectImage = (index: number) => {
+  const showImage = (index: number) => {
     setSelectedIndex(index);
     setMainImageErrorUrl(null);
+  };
+
+  const selectImage = (index: number) => {
+    showImage(index);
+    const image = images[index];
+    if (image) onImageSelect?.(image);
   };
 
   const selectedImage = images[safeIndex];
@@ -207,8 +218,13 @@ function MediaGalleryInner({
           images={images}
           activeIndex={safeIndex}
           productName={productName}
-          onClose={() => setIsZoomed(false)}
-          onNavigate={selectImage}
+          // Selecting a variant rekeys the gallery and would close the
+          // lightbox, so report the image only once it closes.
+          onClose={() => {
+            setIsZoomed(false);
+            if (selectedImage) onImageSelect?.(selectedImage);
+          }}
+          onNavigate={showImage}
         />
       )}
     </div>

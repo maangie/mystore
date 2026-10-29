@@ -74,6 +74,16 @@ export function ProductDetails({ product, basePath }: ProductDetailsProps) {
     return index >= 0 ? index : null;
   }, [selectedVariant, galleryImages]);
 
+  // Picking an image of another variant (e.g. the white photo) selects that
+  // variant, so the chosen option always matches the image on screen.
+  const handleImageSelect = (image: Media) => {
+    if (selectedVariant && image.variant_ids.includes(selectedVariant.id)) {
+      return;
+    }
+    const variant = variants.find((v) => image.variant_ids.includes(v.id));
+    if (variant) setSelectedVariant(variant);
+  };
+
   const price = selectedVariant?.price ?? product.price;
   const originalPrice =
     selectedVariant?.original_price ?? product.original_price;
@@ -122,6 +132,7 @@ export function ProductDetails({ product, basePath }: ProductDetailsProps) {
             images={galleryImages}
             productName={product.name}
             activeIndex={variantImageIndex}
+            onImageSelect={handleImageSelect}
           />
         </div>
 
