@@ -71,5 +71,4 @@ gem "spree_dashboard", "~> 6.0.0"
 group :development, :test do
   gem "spree_dev_tools"
   gem "letter_opener"
-  gem "listen"
 end
