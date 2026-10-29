@@ -188,7 +188,27 @@
     "properties": "Właściwości",
     "yes": "Tak",
     "no": "Nie",
-    "optionFilterChip": "{filter}: {value}"
+    "optionFilterChip": "{filter}: {value}",
+    "customFieldLabels": {
+      "custom": {
+        "warranty": "Gwarancja",
+        "capacity": "Pojemność",
+        "voltage": "Napięcie",
+        "wattage": "Moc",
+        "runtime": "Czas pracy",
+        "room_coverage": "Powierzchnia pomieszczenia",
+        "noise_level": "Poziom hałasu",
+        "connectivity": "Łączność"
+      }
+    },
+    "customFieldValues": {
+      "years": "{count, plural, one {# rok} few {# lata} many {# lat} other {# roku}}",
+      "minutes": "{count, plural, one {# minuta} few {# minuty} many {# minut} other {# minuty}}",
+      "upTo": "Do {value}",
+      "lithium": "{value} litowy",
+      "app": "Aplikacja",
+      "wifiApp": "Wi-Fi + aplikacja"
+    }
   },
   "navigation": {
     "home": "Strona główna",
