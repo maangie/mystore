@@ -188,7 +188,27 @@
     "properties": "仕様",
     "yes": "はい",
     "no": "いいえ",
-    "optionFilterChip": "{filter}: {value}"
+    "optionFilterChip": "{filter}: {value}",
+    "customFieldLabels": {
+      "custom": {
+        "warranty": "保証期間",
+        "capacity": "容量",
+        "voltage": "電圧",
+        "wattage": "消費電力",
+        "runtime": "連続使用時間",
+        "room_coverage": "適用床面積",
+        "noise_level": "運転音",
+        "connectivity": "接続"
+      }
+    },
+    "customFieldValues": {
+      "years": "{count} 年",
+      "minutes": "{count} 分",
+      "upTo": "最大 {value}",
+      "lithium": "{value} リチウム",
+      "app": "アプリ",
+      "wifiApp": "Wi-Fi + アプリ"
+    }
   },
   "navigation": {
     "home": "ホーム",
