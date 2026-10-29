@@ -54,7 +54,10 @@
       "@sentry/cli",
       "@swc/core",
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "@tailwindcss/typography>postcss-selector-parser": "^6.1.5"
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.14",
