@@ -9,3 +9,6 @@ trustLockfile: true
 # after a Spree release would otherwise fail for a day.
 minimumReleaseAgeExclude:
   - '@spree/*'
+patchedDependencies:
+  '@spree/dashboard': patches/@spree__dashboard.patch
+  '@spree/dashboard-core': patches/@spree__dashboard-core.patch
