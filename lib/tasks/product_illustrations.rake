@@ -1,14 +1,14 @@
 # 商品画像を整えるタスク。
 namespace :products do
-  desc "db/data/product_images の <商品の slug>[-<色>].svg を PNG にして、その商品の画像と差し替える。rsvg-convert が必要"
+  desc "db/data/product_images の <商品の slug>[-<色>].{svg,png,jpg,webp} を、その商品の画像と差し替える（SVG は PNG にする）。rsvg-convert が必要"
   task illustrations: :environment do
     abort "rsvg-convert が見つかりません（brew install librsvg）" unless system("which rsvg-convert > /dev/null")
 
     # ja ロケールのまま検索すると ja の翻訳側を探してしまうため、検索は英語版で行う
     products = Mobility.with_locale(:en) { Spree::Product.all.to_a }
     # ファイル名の先頭が一番長く一致する slug の商品とする（色の名前が slug に続く）
-    files = Rails.root.glob("db/data/product_images/*.svg").group_by do |path|
-      name = path.basename(".svg").to_s
+    files = Rails.root.glob("db/data/product_images/*.{svg,png,jpg,webp}").group_by do |path|
+      name = path.basename(".*").to_s
       products.select { |product| name == product.slug || name.start_with?("#{product.slug}-") }.max_by { |product| product.slug.length }
     end
 
@@ -23,13 +23,17 @@ namespace :products do
       Dir.mktmpdir do |dir|
         ActiveRecord::Base.transaction do
           product.media.destroy_all
-          paths.sort.each do |svg_path|
-            name = svg_path.basename(".svg").to_s
-            png_path = File.join(dir, "#{name}.png")
-            system("rsvg-convert", "-w", "1024", "-o", png_path, svg_path.to_s, exception: true)
+          paths.sort.each do |path|
+            name = path.basename(".*").to_s
+            # 写真はそのまま使い、SVG は PNG にする
+            image_path = path.to_s
+            if path.extname == ".svg"
+              image_path = File.join(dir, "#{name}.png")
+              system("rsvg-convert", "-w", "1024", "-o", image_path, path.to_s, exception: true)
+            end
 
             media = product.media.new(alt: alt, media_type: "image", store: Spree::Store.default)
-            media.attachment.attach(io: File.open(png_path), filename: "#{name}.png", content_type: "image/png")
+            media.attachment.attach(io: File.open(image_path), filename: File.basename(image_path), content_type: Marcel::MimeType.for(name: image_path))
             media.save!
             replaced += 1
           end
