@@ -73,6 +73,7 @@ bin/dev
 - 管理画面: http://localhost:3000/dashboard
 - Store API: http://localhost:3000/api/v3/store
 - Admin API: http://localhost:3000/api/v3/admin
+- Rails もストア画面も LAN の全てのアドレスで待ち受けるので、同じ LAN の端末からは `localhost` を Mac の IP アドレスに替えて開ける
 
 管理画面を変えたら作り直す。
 
