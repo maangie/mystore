@@ -63,6 +63,9 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   cacheComponents: true,
+  // <Link> prefetches the shared App Shell. No link uses prefetch={true}, so
+  // nothing relies on the legacy full prefetch.
+  partialPrefetching: true,
   cacheLife: {
     tenMinutes: {
       stale: 300, // 5 minutes client stale window
