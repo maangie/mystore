@@ -15,7 +15,7 @@
 ## 必要なもの
 
 - Ruby（`.ruby-version` を参照）
-- Node.js 24 以上と pnpm（管理画面とストア画面に使う。版は各 `package.json` の `packageManager` に従う）
+- Node.js 26 以上と pnpm（管理画面とストア画面に使う。版は各 `package.json` の `packageManager` に従う）
 - [libvips](https://www.libvips.org/install.html)（商品画像の処理に使う）
 
 ## セットアップ
