@@ -47,6 +47,7 @@ bin/rails spree:load_sample_data # サンプルデータが要るときだけ
 bin/rails spree:load_sample_data       # サンプルの商品（セットアップで実行済みなら不要）
 bin/rails translations:import_ja       # 商品名・説明・カテゴリなどの日本語訳（db/data/translations_ja.yml）
 bin/rails markets:japan                # 日本を JPY の市場にし、円の価格を作る
+bin/rails option_values:set_colors     # 色の選択肢に見本の色を入れる（db/data/option_value_colors.yml）
 bin/rails products:placeholder_images  # 画像のない商品に、商品名入りの仮の画像を付ける
 bin/rails products:illustrations       # db/data/product_images の SVG から商品画像を作り、色ごとに結びつける
 ```
