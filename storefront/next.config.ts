@@ -43,6 +43,10 @@ const nextConfig: NextConfig = {
     "192.168.33.13",
     // Spree monorepo worktrees: store.<branch>.spree.localhost
     "**.spree.localhost",
+    // Extra dev origins, comma-separated (e.g. a LAN IP to test from a phone)
+    ...(process.env.DEV_ORIGINS?.split(",")
+      .map((origin) => origin.trim())
+      .filter(Boolean) ?? []),
   ],
   env: {
     NEXT_PUBLIC_SENTRY_DSN: process.env.SENTRY_DSN || "",
