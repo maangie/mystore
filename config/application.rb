@@ -29,5 +29,12 @@ module Mystore
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Active Record 暗号化の鍵（Spree が決済などの秘密情報を暗号化するのに使う）
+    %i[primary_key deterministic_key key_derivation_salt].each do |key|
+      value = ENV["ACTIVE_RECORD_ENCRYPTION_#{key.upcase}"].presence ||
+        credentials.dig(:active_record_encryption, key).presence
+      config.active_record.encryption[key] = value if value
+    end
   end
 end

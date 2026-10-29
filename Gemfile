@@ -64,11 +64,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-gem "devise"
-gem "spree", "~> 5.6.1"
-gem "spree_emails", "~> 5.6.1"
-gem "spree_admin", "~> 5.6.1"
-gem "spree_i18n"
+gem "spree", "~> 6.0.0"
+gem "spree_emails", "~> 6.0.0"
+gem "spree_dashboard", "~> 6.0.0"
 
 group :development, :test do
   gem "spree_dev_tools"
