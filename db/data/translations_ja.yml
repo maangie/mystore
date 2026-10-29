@@ -1,0 +1,199 @@
+# カタログデータの日本語訳。bin/rails translations:import_ja で取り込む。
+# products のキーは商品の slug、categories のキーは permalink、
+# option_types と option_values のキーは name（いずれも英語版）。
+
+products:
+  automatic-espresso-machine:
+    name: 全自動エスプレッソマシン
+    description: セラミック製グラインダー、15 気圧ポンプ、わかりやすいタッチディスプレイを備えた全自動エスプレッソマシン。豆から挽きたての一杯を淹れます。ボタンひとつで、バリスタ品質のエスプレッソ、カプチーノ、ラテが楽しめます。
+    meta_description: 豆から淹れる全自動エスプレッソマシン。15 気圧ポンプとセラミック製グラインダーを搭載。Spree Commerce のデモストアで販売中。
+  semi-automatic-espresso-machine:
+    name: セミオートエスプレッソマシン
+    description: 58mm ポルタフィルター、PID 温度制御、手動でミルクを泡立てられるスチームワンドを備えた、プロ仕様のセミオートエスプレッソマシン。
+    meta_description: 58mm ポルタフィルター、PID 温度制御、スチームワンドを備えたセミオートエスプレッソマシン。Spree Commerce のデモストアで販売中。
+  drip-coffee-maker:
+    name: ドリップコーヒーメーカー 1.5L
+    description: 保温ポット、濃さの調節、24 時間タイマーを備えたプログラム式ドリップコーヒーメーカー。一度に最大 12 杯分を淹れられます。
+    meta_description: 保温ポット、濃さの調節、24 時間タイマー付きのドリップコーヒーメーカー。最大 12 杯分。Spree Commerce のデモストアで販売中。
+  digital-air-fryer-4l:
+    name: デジタルエアフライヤー 4.2L
+    description: 8 種類の自動メニュー、高速熱風循環、食洗機で洗えるバスケットを備えたコンパクトなデジタルエアフライヤー。少人数のご家庭にぴったりです。
+    meta_description: 8 種類の自動メニューと高速熱風循環、食洗機対応バスケット。少人数のご家庭向け。Spree Commerce のデモストアで販売中。
+  digital-air-fryer-6l:
+    name: デジタルエアフライヤー 6.2L
+    description: タッチパネル操作、8 種類の自動メニュー、中が見える窓を備えた大容量のデジタルエアフライヤー。4〜6 人家族に対応します。
+    meta_description: タッチパネル、8 種類の自動メニュー、のぞき窓付き。4〜6 人家族向けの大容量モデル。Spree Commerce のデモストアで販売中。
+  dual-basket-air-fryer:
+    name: デュアルバスケット エアフライヤー 8L
+    description: 独立した 4L バスケットを 2 つ備えたデュアルゾーンのエアフライヤー。仕上がりをそろえる同時終了機能と 12 種類の調理メニュー付き。2 品を別々の温度で同時に調理できます。
+    meta_description: 4L バスケット 2 つ、同時終了機能、12 種類の調理メニュー。2 品を同時に調理できます。Spree Commerce のデモストアで販売中。
+  high-speed-blender:
+    name: ハイスピードブレンダー 2.0L
+    description: 1500W モーター、無段階の速度ダイヤル、パルス機能、BPA フリーのトライタン製ボトルを備えたプロ仕様のブレンダー。氷や冷凍フルーツもらくに砕きます。
+    meta_description: 1500W モーター、無段階変速、BPA フリーのトライタン製ボトル。氷や冷凍フルーツもらくに砕きます。Spree Commerce のデモストアで販売中。
+  personal-blender:
+    name: パーソナルブレンダー 600ml
+    description: 持ち運べるボトル付きの、1 人分にちょうどいいコンパクトなブレンダー。数秒で作ってそのまま持ち出せます。部品は食洗機で洗えます。
+    meta_description: 持ち運べるボトル付きの 1 人用ブレンダー。作ってそのまま持ち出せます。部品は食洗機対応。Spree Commerce のデモストアで販売中。
+  electric-kettle-1-7l:
+    name: 電気ケトル 1.7L
+    description: 底面ヒーター、360 度回転する電源プレート、水量窓、自動電源オフを備えた速沸きの電気ケトル。満水でも 3 分以内に沸かせます。
+    meta_description: 底面ヒーターと 360 度回転プレートの速沸き電気ケトル。自動電源オフ付き。満水でも 3 分以内。Spree Commerce のデモストアで販売中。
+  temperature-control-kettle:
+    name: 温度調節電気ケトル 1.7L
+    description: 5 段階の温度設定（40〜100℃）、保温機能、LED 温度表示を備えた温度調節ケトル。こだわりのお茶やハンドドリップのコーヒーに最適です。
+    meta_description: 5 段階の温度設定、保温機能、LED 表示付き。お茶やハンドドリップに最適。Spree Commerce のデモストアで販売中。
+  2-slice-toaster:
+    name: 2枚焼きトースター
+    description: 7 段階の焼き色調節、解凍・温め直し機能、幅広の差し込み口、取り外せるパンくずトレイを備えたコンパクトな 2 枚焼きトースター。
+    meta_description: 7 段階の焼き色調節、解凍・温め直し、幅広の差し込み口、パンくずトレイ付き。Spree Commerce のデモストアで販売中。
+  4-slice-toaster:
+    name: 4枚焼きトースター
+    description: 左右独立の操作部、7 段階の焼き色調節、ベーグルモード、小さなパンも取り出しやすいハイリフトレバーを備えた 4 枚焼きトースター。
+    meta_description: 左右独立の操作部、7 段階の焼き色調節、ベーグルモード、ハイリフトレバー付き。Spree Commerce のデモストアで販売中。
+  food-processor-3l:
+    name: フードプロセッサー 3.0L
+    description: 1000W モーター、ステンレス製 S 字ブレード、スライス・おろし用ディスク、パン生地用フック、柑橘しぼり器を備えた多機能フードプロセッサー。
+    meta_description: 1000W モーターと S 字ブレード。スライス、おろし、パン生地、柑橘しぼりのアタッチメント付き。Spree Commerce のデモストアで販売中。
+  air-purifier-compact:
+    name: 空気清浄機 コンパクト
+    description: 25m² までのお部屋に対応するコンパクトな HEPA 空気清浄機。3 層フィルターで 0.3 マイクロメートルの微粒子を 99.97% 捕らえます。おやすみモードは 30dB の静かさです。
+    meta_description: 3 層の HEPA フィルターで微粒子を 99.97% 捕集。30dB の静かなおやすみモード。25m² まで。Spree Commerce のデモストアで販売中。
+  air-purifier-tower:
+    name: 空気清浄機 タワー
+    description: 80m² までのお部屋に対応する高性能なタワー型空気清浄機。True HEPA H13 フィルター、空気の状態をリアルタイムで示す LED リング、自動モード、アプリ連携を備えています。
+    meta_description: True HEPA H13 フィルター、空気の状態を示す LED リング、アプリ連携。80m² まで。Spree Commerce のデモストアで販売中。
+  air-purifier-pro:
+    name: 空気清浄機 プロ
+    description: 120m² までのお部屋に対応するプレミアム空気清浄機。HEPA H13 と活性炭フィルター、VOC センサー、自動モードを備え、運転音はささやくように静かです。アレルゲン、煙、においを取り除きます。
+    meta_description: HEPA H13 と活性炭フィルター、VOC センサー、自動モード。120m² まで対応し、アレルゲンを除去。Spree Commerce のデモストアで販売中。
+  ultrasonic-humidifier-2l:
+    name: 超音波式加湿器 2.0L
+    description: 30m² までのお部屋に対応する静かな超音波式加湿器。ミスト量の調節、20 時間の連続運転、水がなくなると自動で止まる機能、アロマトレイ（別売）に対応しています。
+    meta_description: 静かな 20 時間連続運転、ミスト量の調節、自動停止機能付き。30m² まで。Spree Commerce のデモストアで販売中。
+  smart-humidifier-4l:
+    name: スマート加湿器 4.0L
+    description: 湿度センサー、自動モード、アプリ操作、40 時間の連続運転を備えた大容量のスマート加湿器。50m² までのお部屋に対応します。
+    meta_description: 湿度センサー、自動モード、アプリ操作。40 時間連続運転で 50m² まで。Spree Commerce のデモストアで販売中。
+  tower-fan:
+    name: タワーファン 100cm
+    description: 3 段階の風量、自然風モード、8 時間タイマー、リモコンを備えた首振り式のスリムなタワーファン。寝室やオフィスでも場所を取りません。
+    meta_description: 首振り、3 段階の風量、自然風モード、8 時間タイマー、リモコン付き。Spree Commerce のデモストアで販売中。
+  pedestal-fan:
+    name: リビング扇風機 40cm
+    description: 高さを調節できるリビング扇風機。羽根径 40cm、3 段階の風量、首振り、角度調節付き。運転音が静かで、ご家庭にもオフィスにも向いています。
+    meta_description: 高さ調節、羽根径 40cm、3 段階の風量、首振り付き。静かでご家庭にもオフィスにも。Spree Commerce のデモストアで販売中。
+  steam-generator-iron:
+    name: スチームジェネレーター アイロン
+    description: セラミック製かけ面、毎分 180g のスチームショット、1.8L タンク、カルキ防止機能を備えた高圧スチームジェネレーター。どんな生地のしわもすばやく伸ばします。
+    meta_description: 毎分 180g のスチームショット、1.8L タンク、セラミック製かけ面。どんな生地のしわも伸ばします。Spree Commerce のデモストアで販売中。
+  handheld-garment-steamer:
+    name: ハンディ衣類スチーマー
+    description: 200ml タンク、25 秒で立ち上がるヒーター、連続スチームを備えた持ち運べるハンディスチーマー。ハンガーに掛けたままの服をさっと整えられます。
+    meta_description: 200ml タンク、25 秒で立ち上がり、連続スチーム。掛けたままの服をさっと整えます。Spree Commerce のデモストアで販売中。
+  professional-garment-steamer:
+    name: プロ仕様 衣類スチーマー
+    description: 1.5L タンク、伸縮ポール、ハンガー、45 分の連続スチームを備えたスタンド型の衣類スチーマー。しわを押さえて伸ばせる加熱プレート付きです。
+    meta_description: 1.5L タンク、伸縮ポール、45 分の連続スチーム。しわ取り用の加熱プレート付き。Spree Commerce のデモストアで販売中。
+  steam-iron:
+    name: スチームアイロン 2400W
+    description: セラミック製かけ面、毎分 45g の連続スチーム、150g のスチームショット、水だれ防止、セルフクリーニング機能を備えたパワフルなスチームアイロン。
+    meta_description: セラミック製かけ面、150g のスチームショット、水だれ防止、セルフクリーニング付き。Spree Commerce のデモストアで販売中。
+  cordless-stick-vacuum-18v:
+    name: コードレススティック掃除機 18V
+    description: 35 分の連続運転、モーターヘッド、LED ライトを備えた軽量なコードレススティック掃除機。ハンディ掃除機にもなる 2-in-1 設計です。
+    meta_description: 35 分の連続運転、モーターヘッド、LED ライト。ハンディにもなる 2-in-1。Spree Commerce のデモストアで販売中。
+  cordless-stick-vacuum-25v:
+    name: コードレススティック掃除機 25V
+    description: 60 分の連続運転、サイクロン式フィルター、床材を選ばないモーターヘッド、水拭きアタッチメントを備えた高性能なコードレス掃除機。1 台で 3 役こなします。
+    meta_description: 60 分の連続運転、サイクロン式、水拭きアタッチメント付き。1 台 3 役。Spree Commerce のデモストアで販売中。
+  bagless-upright-vacuum:
+    name: サイクロン式 縦型掃除機
+    description: サイクロン方式、HEPA フィルター、1.5L のダストカップ、8m の電源コードを備えた、紙パック不要のパワフルな縦型掃除機。さまざまな床に使えるノズル付きです。
+    meta_description: サイクロン方式、HEPA フィルター、8m コード、1.5L ダストカップ。多用途ノズル付き。Spree Commerce のデモストアで販売中。
+  robot-vacuum:
+    name: ロボット掃除機
+    description: ジャイロセンサーによる走行、2500Pa の吸引力、120 分の連続運転、高さ 7cm の薄型ボディ、アプリでのスケジュール設定を備えたスマートなロボット掃除機。充電台に自動で戻ります。
+    meta_description: 2500Pa の吸引力、120 分の連続運転、高さ 7cm の薄型、アプリでスケジュール設定。充電台に自動で戻ります。Spree Commerce のデモストアで販売中。
+  ionic-hair-dryer:
+    name: マイナスイオン ヘアドライヤー 2000W
+    description: 2000W モーター、3 段階の温度、2 段階の風量、冷風ボタン、集風ノズルを備えたプロ仕様のマイナスイオンドライヤー。髪の広がりをおさえ、乾かす時間を短くします。
+    meta_description: 3 段階の温度、冷風ボタン、集風ノズル付き。マイナスイオンで広がりをおさえ、早く乾かします。Spree Commerce のデモストアで販売中。
+  travel-hair-dryer:
+    name: コンパクト トラベルヘアドライヤー
+    description: 電圧切り替え（110V／220V）、1600W、2 段階の温度、コンパクトな収納袋を備えた折りたたみ式のトラベルドライヤー。重さはわずか 450g です。
+    meta_description: 110V／220V の電圧切り替え、折りたたみ式、収納袋付き。450g の軽さで旅行に。Spree Commerce のデモストアで販売中。
+  ceramic-hair-straightener:
+    name: セラミック ストレートアイロン
+    description: フローティングプレート、温度調節（150〜230℃）、イオンコンディショニング、30 秒で立ち上がるヒーター、自動電源オフを備えたプロ仕様のセラミックストレートアイロン。
+    meta_description: フローティングプレート、150〜230℃、イオンコンディショニング、30 秒で立ち上がり。自動電源オフ付き。Spree Commerce のデモストアで販売中。
+  beard-trimmer-3000:
+    name: ヒゲトリマー 3000
+    description: 20 段階の長さ設定（0.5〜10mm）、チタン刃、60 分のコードレス運転、水洗いできるヘッドを備えた精密ヒゲトリマー。
+    meta_description: 20 段階の長さ設定（0.5〜10mm）、チタン刃、60 分のコードレス運転。ヘッドは水洗い可能。Spree Commerce のデモストアで販売中。
+  beard-trimmer-7000:
+    name: ヒゲトリマー 7000
+    description: 40 段階の精密な長さ設定、チタンコーティング刃、LED ディスプレイ、90 分の連続運転、トラベルロック、6 種類のアタッチメントを備えたプレミアムヒゲトリマー。
+    meta_description: 40 段階の長さ設定、LED ディスプレイ、90 分の連続運転、6 種類のアタッチメント。チタンコーティング刃。Spree Commerce のデモストアで販売中。
+  multigroom-kit:
+    name: マルチグルーミングキット 10-in-1
+    description: ヒゲ、髪、鼻毛、耳毛、ボディに使える 10 種類のアタッチメントが付いたオールインワンのグルーミングキット。ステンレス刃、90 分の連続運転、収納袋付き。
+    meta_description: ヒゲ、髪、鼻毛、耳毛、ボディ用の 10 種類のアタッチメント。90 分の連続運転、収納袋付き。Spree Commerce のデモストアで販売中。
+  rotary-shaver-5000:
+    name: 回転式シェーバー 5000
+    description: 3 つの可動ヘッド、60 分のコードレス運転、ポップアップ式きわぞり刃、トラベルケースを備えたお風呂剃り対応の回転式シェーバー。顔の輪郭にフィットして、深く快適に剃れます。
+    meta_description: お風呂剃り対応、3 つの可動ヘッド、60 分の連続運転、きわぞり刃とトラベルケース付き。Spree Commerce のデモストアで販売中。
+  rotary-shaver-9000:
+    name: 回転式シェーバー 9000
+    description: ナノ精度の刃、肌の状態を感知するセンサー、90 分の連続運転、ワイヤレス充電パッド、洗浄スタンドを備えたプレミアム回転式シェーバー。肌への刺激をおさえながら、深く剃れます。
+    meta_description: ナノ精度の刃、90 分の連続運転、ワイヤレス充電、洗浄スタンド付き。Spree Commerce のデモストアで販売中。
+
+categories:
+  kitchen: キッチン
+  kitchen/coffee-machines: コーヒーマシン
+  kitchen/air-fryers: エアフライヤー
+  kitchen/blenders: ブレンダー
+  kitchen/kettles: 電気ケトル
+  kitchen/toasters: トースター
+  kitchen/food-processors: フードプロセッサー
+  air-and-climate: 空調・空気清浄
+  air-and-climate/air-purifiers: 空気清浄機
+  air-and-climate/humidifiers: 加湿器
+  air-and-climate/fans: 扇風機
+  garment-care: 衣類ケア
+  garment-care/steam-generators: スチームジェネレーター
+  garment-care/handheld-steamers: ハンディスチーマー
+  garment-care/irons: アイロン
+  floor-care: 床掃除
+  floor-care/cordless-vacuums: コードレス掃除機
+  floor-care/upright-vacuums: 縦型掃除機
+  floor-care/robot-vacuums: ロボット掃除機
+  personal-care: 理美容
+  personal-care/hair-dryers: ヘアドライヤー
+  personal-care/hair-straighteners: ストレートアイロン
+  personal-care/trimmers: トリマー
+  personal-care/electric-shavers: 電気シェーバー
+
+option_types:
+  color: カラー
+
+option_values:
+  matte-black: マットブラック
+  silver: シルバー
+  white: ホワイト
+  stainless-steel: ステンレス
+  steel-grey: スチールグレー
+  mint: ミント
+  blue-and-white: ブルー×ホワイト
+  purple-and-white: パープル×ホワイト
+  white-and-grey: ホワイト×グレー
+  grey-and-white: グレー×ホワイト
+  graphite: グラファイト
+  black-and-blue: ブラック×ブルー
+  black-and-red: ブラック×レッド
+  rose-gold: ローズゴールド
+  pink: ピンク
+  dark-grey: ダークグレー
+  gunmetal: ガンメタル
+  dark-blue: ダークブルー
+  chrome: クローム
