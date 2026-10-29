@@ -188,7 +188,27 @@
     "properties": "Eigenschaften",
     "yes": "Ja",
     "no": "Nein",
-    "optionFilterChip": "{filter}: {value}"
+    "optionFilterChip": "{filter}: {value}",
+    "customFieldLabels": {
+      "custom": {
+        "warranty": "Garantie",
+        "capacity": "Kapazität",
+        "voltage": "Spannung",
+        "wattage": "Leistung",
+        "runtime": "Laufzeit",
+        "room_coverage": "Raumgröße",
+        "noise_level": "Geräuschpegel",
+        "connectivity": "Konnektivität"
+      }
+    },
+    "customFieldValues": {
+      "years": "{count, plural, one {# Jahr} other {# Jahre}}",
+      "minutes": "{count, plural, one {# Minute} other {# Minuten}}",
+      "upTo": "Bis zu {value}",
+      "lithium": "{value} Lithium",
+      "app": "App",
+      "wifiApp": "WLAN + App"
+    }
   },
   "navigation": {
     "home": "Startseite",
