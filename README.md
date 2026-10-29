@@ -38,6 +38,26 @@ bin/rails spree:load_sample_data # サンプルデータが要るときだけ
 `bin/rails db:encryption:init` が出す鍵を `active_record_encryption` として credentials に入れる
 （環境変数 `ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY` などでもよい）。
 
+## 日本向けのデータ
+
+商品・価格・画像などは DB の中のデータで、リポジトリにはそれを入れるタスクだけがある。
+`git pull` ではデータは増えないので、新しい DB（開発・本番・E2E 用など）では次を順に 1 回ずつ実行する。
+
+```bash
+bin/rails spree:load_sample_data       # サンプルの商品（セットアップで実行済みなら不要）
+bin/rails translations:import_ja       # 商品名・説明・カテゴリなどの日本語訳（db/data/translations_ja.yml）
+bin/rails markets:japan                # 日本を JPY の市場にし、円の価格を作る
+bin/rails products:placeholder_images  # 画像のない商品に、商品名入りの仮の画像を付ける
+bin/rails products:illustrations       # db/data/product_images の SVG から商品画像を作り、色ごとに結びつける
+```
+
+- `markets:japan` は `JPY_RATE` で 1 USD あたりの円を指定できる（省略時は 150）。すでにある円の価格には触らない
+- `products:placeholder_images` と `products:illustrations` は `rsvg-convert` が要る（`brew install librsvg`）。
+  `placeholder_images` は画像のない商品だけが対象。`illustrations` は SVG のある商品の画像を作り直す。
+  実行する順は `placeholder_images` → `illustrations` のどちらでもよい
+- 色を変えて画像を変えたい商品は、`db/data/product_images/<商品の slug>-<色>.svg` を置いて `products:illustrations` を実行する
+  （色は商品のバリアントの色の名前。`products:link_color_images` が、その名前の画像をその色に結びつける）
+
 ## 起動
 
 ```bash
