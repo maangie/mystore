@@ -111,4 +111,5 @@ cd storefront && pnpm run test:mystore
 - Spree はログインを同じ IP から 1 分に 5 回までしか受け付けない。テストは 1 回で 3 回ログインするので、
   続けて流すときは 1 分あける
 - ブラウザが無ければ `cd storefront && pnpm exec playwright install chromium` で入れる
+- CI では `e2e` のジョブで流す。新しい DB に日本向けのデータ（画像の差し替えは除く）を入れてから動かす
 - `storefront/e2e/` は Spree が用意したもので、Docker で動かす公式の Spree につなぐ（`pnpm run test:e2e`）
