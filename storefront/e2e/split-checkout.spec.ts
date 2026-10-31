@@ -24,7 +24,7 @@ const PRODUCTS = [
   { slug: "e2e-seller-mug", name: "E2E Seller Mug" },
 ] as const;
 
-test("a checkout spanning two sellers confirms as one order, also after a reload", async ({
+test("2 つの販売者にまたがる注文は 1 つの注文として確定し、再読み込みしてもそのまま", async ({
   page,
 }) => {
   skipWithoutStripe();

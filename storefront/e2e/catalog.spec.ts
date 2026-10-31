@@ -14,10 +14,8 @@ function productNames(page: Page) {
     .allTextContents();
 }
 
-test.describe("home page", () => {
-  test("shows featured products that open their product page", async ({
-    page,
-  }) => {
+test.describe("トップページ", () => {
+  test("注目の商品が出て、その商品のページを開ける", async ({ page }) => {
     await page.goto(BASE_PATH);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(
@@ -27,15 +25,13 @@ test.describe("home page", () => {
     await openFirstProduct(page, BASE_PATH);
   });
 
-  test("the header menu opens a category", async ({ page }) => {
+  test("ヘッダーのメニューからカテゴリを開ける", async ({ page }) => {
     await openCategoryFromMenu(page);
   });
 });
 
-test.describe("category page", () => {
-  test("lists the category's products with a count and breadcrumb", async ({
-    page,
-  }) => {
+test.describe("カテゴリのページ", () => {
+  test("カテゴリの商品を件数とパンくずリスト付きで並べる", async ({ page }) => {
     const name = await openFirstCategory(page);
     const breadcrumb = page.getByRole("navigation", { name: "Breadcrumb" });
     await expect(breadcrumb.getByRole("link", { name: "Home" })).toBeVisible();
@@ -47,7 +43,7 @@ test.describe("category page", () => {
     expect((await productNames(page)).length).toBeGreaterThan(0);
   });
 
-  test("a subcategory narrows the listing", async ({ page }) => {
+  test("サブカテゴリを選ぶと絞り込まれる", async ({ page }) => {
     const parent = await openFirstCategory(page);
     const subcategory = page
       .getByRole("main")
@@ -69,7 +65,7 @@ test.describe("category page", () => {
     ).toBeVisible();
   });
 
-  test("sorts products by name", async ({ page }) => {
+  test("商品を名前で並べ替える", async ({ page }) => {
     await openFirstCategory(page);
     const sort = page.getByRole("button", { name: "Sort" });
     await waitForHydration(sort);
@@ -88,7 +84,7 @@ test.describe("category page", () => {
       .toBe(true);
   });
 
-  test("a product card opens its product page", async ({ page }) => {
+  test("商品のカードからその商品のページを開ける", async ({ page }) => {
     await openFirstCategory(page);
     await openFirstProduct(page, page.url());
   });

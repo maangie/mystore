@@ -103,7 +103,7 @@ async function openOrderPlaced(
   await page.goto(`${BASE_PATH}/order-placed/${CART_ID}`);
 }
 
-test("a split checkout shows every seller's delivery under one order", async ({
+test("販売者が分かれた注文は、全ての販売者の配送を 1 つの注文の中に出す", async ({
   page,
 }) => {
   await openOrderPlaced(page, splitCheckout);
@@ -136,7 +136,7 @@ test("a split checkout shows every seller's delivery under one order", async ({
   await expect(page.getByText("Visa ending in 4242")).toBeVisible();
 });
 
-test("a single-seller checkout reads as one plain order", async ({ page }) => {
+test("販売者が 1 つの注文は、ふつうの 1 つの注文に見える", async ({ page }) => {
   await openOrderPlaced(page, splitCheckout.orders[0]);
 
   await expect(

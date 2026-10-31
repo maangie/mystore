@@ -226,7 +226,7 @@ const TEST_CARD = "4242424242424242";
 export function skipWithoutStripe(): void {
   test.skip(
     !process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
-    "Stripe test keys are not configured for this run",
+    "この実行では Stripe のテスト用キーが設定されていない",
   );
 }
 

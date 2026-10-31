@@ -3,7 +3,7 @@ import { BASE_PATH, waitForHydration } from "./support";
 
 // The header's region button is desktop-only (`hidden lg:flex`), which the
 // default Desktop Chrome viewport satisfies.
-test.describe("region preferences (header)", () => {
+test.describe("地域と言語の設定（ヘッダー）", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(BASE_PATH);
     await waitForHydration(
@@ -13,9 +13,7 @@ test.describe("region preferences (header)", () => {
     );
   });
 
-  test("clicking the flag opens the region and language dialog", async ({
-    page,
-  }) => {
+  test("国旗を押すと地域と言語のダイアログが開く", async ({ page }) => {
     await page
       .getByRole("banner")
       .getByRole("button", { name: "Region and language" })
@@ -30,7 +28,7 @@ test.describe("region preferences (header)", () => {
     ).toBeEnabled();
   });
 
-  test("closes with Escape without changing the page", async ({ page }) => {
+  test("Escape で閉じ、ページは変わらない", async ({ page }) => {
     await page
       .getByRole("banner")
       .getByRole("button", { name: "Region and language" })
@@ -44,9 +42,7 @@ test.describe("region preferences (header)", () => {
     await expect(page).toHaveURL(new RegExp(`${BASE_PATH}$`));
   });
 
-  test("submitting unchanged preferences just closes the dialog", async ({
-    page,
-  }) => {
+  test("設定を変えずに送るとダイアログが閉じるだけ", async ({ page }) => {
     await page
       .getByRole("banner")
       .getByRole("button", { name: "Region and language" })
@@ -59,9 +55,7 @@ test.describe("region preferences (header)", () => {
     await expect(page).toHaveURL(new RegExp(`${BASE_PATH}$`));
   });
 
-  test("switching region navigates to that region's storefront", async ({
-    page,
-  }) => {
+  test("地域を切り替えると、その地域のストア画面に移る", async ({ page }) => {
     await page
       .getByRole("banner")
       .getByRole("button", { name: "Region and language" })
@@ -76,7 +70,7 @@ test.describe("region preferences (header)", () => {
           .map((option) => (option as HTMLOptionElement).value)
           .find((value) => value !== "us"),
       );
-    test.skip(!other, "the seeded store has only one region");
+    test.skip(!other, "初期データのストアには地域が 1 つしかない");
 
     await region.selectOption(other as string);
     await dialog.getByRole("button", { name: "Update preferences" }).click();

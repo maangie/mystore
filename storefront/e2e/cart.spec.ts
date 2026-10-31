@@ -6,8 +6,8 @@ import {
   waitForHydration,
 } from "./support";
 
-test.describe("cart page", () => {
-  test("an empty cart points back to the catalog", async ({ page }) => {
+test.describe("カートのページ", () => {
+  test("カートが空なら商品一覧へのリンクが出る", async ({ page }) => {
     await page.goto(`${BASE_PATH}/cart`);
     await expect(
       page.getByRole("heading", { name: "Your cart is empty" }),
@@ -21,9 +21,7 @@ test.describe("cart page", () => {
     await expect(page).toHaveURL(/\/products$/);
   });
 
-  test("a customer changes the quantity and removes the item", async ({
-    page,
-  }) => {
+  test("顧客が数量を変えて、商品を取り除く", async ({ page }) => {
     const name = await openFirstProduct(page, `${BASE_PATH}/products`);
     await addToCart(page, name);
 

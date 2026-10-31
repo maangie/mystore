@@ -6,10 +6,8 @@ import {
   waitForHydration,
 } from "./support";
 
-test.describe("product page", () => {
-  test("shows the product's price, availability and details", async ({
-    page,
-  }) => {
+test.describe("商品のページ", () => {
+  test("商品の価格・在庫・詳細が出る", async ({ page }) => {
     await openFirstProduct(page, `${BASE_PATH}/products`);
 
     await expect(page.getByText(/\$\d/).first()).toBeVisible();
@@ -20,7 +18,7 @@ test.describe("product page", () => {
     ).toBeVisible();
   });
 
-  test("adds the chosen quantity to the cart", async ({ page }) => {
+  test("選んだ数量をカートに入れる", async ({ page }) => {
     const name = await openFirstProduct(page, `${BASE_PATH}/products`);
     const quantity = page.getByRole("textbox", { name: "Quantity" });
     await page.getByRole("button", { name: "Increase quantity" }).click();
@@ -39,7 +37,7 @@ test.describe("product page", () => {
 // Created by scripts/e2e/bootstrap-spree.sh: black in S, M and L, red in S and
 // M only. Everything is $20 except red M, on sale at $15 instead of $25, and
 // black L is sold out.
-test.describe("product page with color and size options", () => {
+test.describe("色とサイズを選べる商品のページ", () => {
   const name = "E2E Two-Option Tee";
 
   function detail(page: Page, term: string) {
@@ -66,9 +64,7 @@ test.describe("product page with color and size options", () => {
     await waitForHydration(size(page, "M"));
   });
 
-  test("picking a color and a size adds that combination to the cart", async ({
-    page,
-  }) => {
+  test("色とサイズを選ぶと、その組み合わせがカートに入る", async ({ page }) => {
     await expect(size(page, "L")).toBeEnabled();
 
     await page.getByRole("main").getByTitle("Red", { exact: true }).click();
@@ -87,7 +83,7 @@ test.describe("product page with color and size options", () => {
     await expect(drawer.getByText("Color: Red, Size: M")).toBeVisible();
   });
 
-  test("a discounted variant shows its sale price, and the cart charges it", async ({
+  test("値引きしたバリアントはセール価格が出て、カートでもその価格になる", async ({
     page,
   }) => {
     const main = page.getByRole("main");
@@ -113,7 +109,7 @@ test.describe("product page with color and size options", () => {
     await expect(drawer.getByText("$15.00").first()).toBeVisible();
   });
 
-  test("a sold-out variant can be picked but not added to the cart", async ({
+  test("売り切れのバリアントは選べるが、カートには入れられない", async ({
     page,
   }) => {
     const main = page.getByRole("main");

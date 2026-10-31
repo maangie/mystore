@@ -20,9 +20,7 @@ import {
 
 const TEST_EMAIL = "e2e-buyer@example.com";
 
-test("guest can complete a checkout with a Stripe test card", async ({
-  page,
-}) => {
+test("ゲストが Stripe のテスト用カードで注文を終えられる", async ({ page }) => {
   skipWithoutStripe();
   // The card-fill and submit steps below are retry loops (the Payment
   // Element can remount mid-flow and wipe typed input) — they need

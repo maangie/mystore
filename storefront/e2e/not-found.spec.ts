@@ -14,26 +14,24 @@ async function expectNotFoundPage(page: Page, path: string): Promise<void> {
   await expect(page.getByRole("contentinfo")).toBeVisible();
 }
 
-test.describe("not found page", () => {
-  test("a missing product answers 404 inside the storefront layout", async ({
-    page,
-  }) => {
+test.describe("見つからないページ", () => {
+  test("無い商品はストア画面の枠の中で 404 になる", async ({ page }) => {
     await expectNotFoundPage(page, `/products/${missing}`);
   });
 
-  test("a missing category answers 404", async ({ page }) => {
+  test("無いカテゴリは 404 になる", async ({ page }) => {
     await expectNotFoundPage(page, `/c/${missing}`);
   });
 
-  test("a missing policy answers 404", async ({ page }) => {
+  test("無い規約は 404 になる", async ({ page }) => {
     await expectNotFoundPage(page, `/policies/${missing}`);
   });
 
-  test("an unknown page answers 404", async ({ page }) => {
+  test("知らないページは 404 になる", async ({ page }) => {
     await expectNotFoundPage(page, `/${missing}/${missing}`);
   });
 
-  test("stays on the 404 page once the cart and session load", async ({
+  test("カートとセッションを読み込んだ後も 404 のページのまま", async ({
     page,
   }) => {
     let pageLoads = 0;
@@ -51,7 +49,7 @@ test.describe("not found page", () => {
     expect(pageLoads).toBe(1);
   });
 
-  test("links back into the catalog", async ({ page }) => {
+  test("商品一覧へ戻るリンクがある", async ({ page }) => {
     await expectNotFoundPage(page, `/products/${missing}`);
 
     const browse = page.getByRole("link", { name: "Browse all products" });

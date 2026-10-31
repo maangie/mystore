@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 import { signUp, waitForHydration } from "./support";
 
-test.describe("customer account", () => {
+test.describe("顧客のアカウント", () => {
   test.beforeEach(async ({ page }) => {
     await signUp(page, { firstName: "Grace", lastName: "Hopper" });
   });
 
-  test("the account navigation reaches every section", async ({ page }) => {
+  test("アカウントのメニューから全ての項目を開ける", async ({ page }) => {
     const nav = page.getByRole("complementary").getByRole("navigation");
     const sections = [
       { link: "Orders", heading: "Order History", empty: "No orders yet" },
@@ -32,7 +32,7 @@ test.describe("customer account", () => {
     }
   });
 
-  test("a customer adds and deletes an address", async ({ page }) => {
+  test("顧客が住所を追加して削除する", async ({ page }) => {
     await page
       .getByRole("complementary")
       .getByRole("link", { name: "Addresses" })
@@ -83,7 +83,7 @@ test.describe("customer account", () => {
     ).toBeVisible({ timeout: 30_000 });
   });
 
-  test("a customer updates their name", async ({ page }) => {
+  test("顧客が名前を変える", async ({ page }) => {
     await page
       .getByRole("complementary")
       .getByRole("link", { name: "Profile" })

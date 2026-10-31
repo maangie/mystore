@@ -7,8 +7,8 @@ import {
   waitForHydration,
 } from "./support";
 
-test.describe("sign up and sign in", () => {
-  test("a new customer signs up, signs out and signs back in", async ({
+test.describe("会員登録とログイン", () => {
+  test("新しい顧客が会員登録し、ログアウトして、もう一度ログインする", async ({
     page,
   }) => {
     const { email, password } = await signUp(page, {
@@ -33,7 +33,7 @@ test.describe("sign up and sign in", () => {
     ).toBeVisible({ timeout: 30_000 });
   });
 
-  test("a wrong password is refused", async ({ page }) => {
+  test("パスワードが違うとログインできない", async ({ page }) => {
     const { email } = await signUp(page);
     await page.context().clearCookies();
 
@@ -44,7 +44,7 @@ test.describe("sign up and sign in", () => {
     });
   });
 
-  test("an account page sends a guest to sign in and back", async ({
+  test("ゲストがアカウントのページを開くと、ログインしてから元のページに戻る", async ({
     page,
   }) => {
     const { email, password } = await signUp(page);
@@ -58,7 +58,7 @@ test.describe("sign up and sign in", () => {
     ).toBeVisible({ timeout: 30_000 });
   });
 
-  test("sign up refuses passwords that do not match", async ({ page }) => {
+  test("確認用のパスワードが合わないと会員登録できない", async ({ page }) => {
     await page.goto(`${BASE_PATH}/account/register`);
     await waitForHydration(formWithButton(page, "Create Account"));
     await page.getByRole("textbox", { name: "First name" }).fill("E2E");
