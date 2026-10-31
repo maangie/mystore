@@ -260,6 +260,8 @@ jobs:
           bin/rails translations:import_ja
           bin/rails markets:japan
           bin/rails option_values:set_colors
+          # 管理画面の言語は管理者ごとの設定で、作ったばかりの管理者は英語になる
+          bin/rails runner 'Spree::AdminUser.find_by!(email: ENV.fetch("ADMIN_EMAIL")).update!(selected_locale: "ja")'
 
       - name: Write storefront/.env.local
         run: |
