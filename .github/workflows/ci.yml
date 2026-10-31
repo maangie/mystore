@@ -195,3 +195,93 @@ jobs:
           name: screenshots
           path: ${{ github.workspace }}/tmp/screenshots
           if-no-files-found: ignore
+
+  # ストア画面と管理画面を Playwright で操作して確かめる（storefront/e2e-mystore）。
+  # 手元と同じく、開発用の DB に日本向けのデータを入れ、bin/dev で立ち上げて動かす。
+  e2e:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: development
+      AUTO_ACCEPT: 1
+      ADMIN_EMAIL: spree@example.com
+      ADMIN_PASSWORD: spree123
+      # CI でだけ使う使い捨ての鍵
+      ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY: ci-primary-key-for-e2e-only-000000
+      ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY: ci-deterministic-key-for-e2e-only-0
+      ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT: ci-key-derivation-salt-for-e2e-only
+      # ログインは 1 分に 5 回までなので、失敗したテストを再試行すると足りなくなる
+      SPREE_RATE_LIMIT_LOGIN: 50
+      SPREE_RATE_LIMIT_REFRESH: 100
+    steps:
+      - name: Install packages
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y libvips
+
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      # pnpm は各ディレクトリの packageManager の版に自分で切り替わる
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          package_json_file: storefront/package.json
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: pnpm
+          cache-dependency-path: |
+            dashboard/pnpm-lock.yaml
+            storefront/pnpm-lock.yaml
+
+      - name: Build React dashboard
+        working-directory: dashboard
+        env:
+          VITE_BASE_PATH: /dashboard/
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Install storefront dependencies
+        working-directory: storefront
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec playwright install --with-deps chromium
+
+      - name: Prepare database with Japanese data
+        run: |
+          bin/rails db:prepare
+          bin/rails spree:load_sample_data
+          bin/rails translations:import_ja
+          bin/rails markets:japan
+          bin/rails option_values:set_colors
+          # 管理画面の言語は管理者ごとの設定で、作ったばかりの管理者は英語になる
+          bin/rails runner 'Spree::AdminUser.find_by!(email: ENV.fetch("ADMIN_EMAIL")).update!(selected_locale: "ja")'
+
+      - name: Write storefront/.env.local
+        run: |
+          key=$(bin/rails spree:cli:ensure_api_key)
+          cat > storefront/.env.local <<EOF
+          SPREE_API_URL=http://localhost:3000
+          SPREE_PUBLISHABLE_KEY=$key
+          NEXT_PUBLIC_DEFAULT_COUNTRY=us
+          NEXT_PUBLIC_DEFAULT_LOCALE=en
+          NEXT_PUBLIC_SITE_URL=http://localhost:3001
+          EOF
+
+      - name: Run E2E tests
+        working-directory: storefront
+        run: pnpm run test:mystore
+
+      - name: Keep Playwright results from failed E2E tests
+        uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: e2e-results
+          path: storefront/test-results/mystore
+          if-no-files-found: ignore
