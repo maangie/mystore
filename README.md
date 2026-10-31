@@ -95,3 +95,20 @@ bin/bundler-audit
 (cd dashboard && pnpm audit)
 (cd storefront && pnpm run check && pnpm exec tsc --noEmit && pnpm test && pnpm audit)
 ```
+
+### 画面を操作して確かめるテスト
+
+ブラウザ（Playwright）でストア画面と管理画面を操作して確かめる。
+テストは `storefront/e2e-mystore/` にある。
+
+```bash
+cd storefront && pnpm run test:mystore
+```
+
+- 開発用のサーバーと DB に対して動く。`bin/dev` が動いていなければテストが立ち上げる。
+  DB には「日本向けのデータ」を入れておく
+- 管理者は `spree@example.com` / `spree123`。違うときは `ADMIN_EMAIL` / `ADMIN_PASSWORD` で渡す
+- Spree はログインを同じ IP から 1 分に 5 回までしか受け付けない。テストは 1 回で 3 回ログインするので、
+  続けて流すときは 1 分あける
+- ブラウザが無ければ `cd storefront && pnpm exec playwright install chromium` で入れる
+- `storefront/e2e/` は Spree が用意したもので、Docker で動かす公式の Spree につなぐ（`pnpm run test:e2e`）
