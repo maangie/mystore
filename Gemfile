@@ -65,7 +65,7 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "spree", "~> 6.0.0"
-gem "spree_emails", "~> 6.0.0"
+gem "spree_emails", "~> 6.0.1"
 gem "spree_dashboard", "~> 6.0.0"
 
 group :development, :test do
