@@ -137,9 +137,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    capybara-screenshot (1.0.27)
-      capybara (>= 1.0, < 4)
-      launchy
     childprocess (5.1.0)
       logger (~> 1.5)
     coderay (1.1.3)
@@ -373,7 +370,7 @@ GEM
       uri
       yaml
     parallel (2.3.0)
-    parallel_tests (5.8.0)
+    parallel_tests (5.9.0)
       parallel
     paranoia (3.1.0)
       activerecord (>= 7, < 8.2)
@@ -617,11 +614,9 @@ GEM
       wannabe_bool
     spree_dashboard (6.0.0)
       spree (= 6.0.0)
-    spree_dev_tools (0.6.3)
+    spree_dev_tools (1.0.0)
       awesome_print
       brakeman
-      capybara
-      capybara-screenshot
       database_cleaner
       dotenv
       factory_bot
@@ -639,9 +634,8 @@ GEM
       rspec-retry
       rspec_junit_formatter
       ruby-lsp (>= 0.23.0)
-      selenium-webdriver (>= 4.14)
       simplecov
-      spree (>= 5.4.0.alpha)
+      spree (>= 6.0.0.beta1)
       timecop
     spree_emails (6.0.0)
       spree (= 6.0.0)
@@ -790,7 +784,6 @@ CHECKSUMS
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
   cancancan (3.7.0) sha256=6dfcc6056cc3d8205446bcb368f50913b6aceec2191b3f4d84e82b5607013722
   capybara (3.40.0) sha256=42dba720578ea1ca65fd7a41d163dd368502c191804558f6e0f71b391054aeef
-  capybara-screenshot (1.0.27) sha256=afa1896cc23df77be1774e8d3b3ce3953bf060aeaa04ff87607b5daf689174f2
   childprocess (5.1.0) sha256=9a8d484be2fd4096a0e90a0cd3e449a05bc3aa33f8ac9e4d6dcef6ac1455b6ec
   coderay (1.1.3) sha256=dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7fc77d4b
   concurrent-ruby (1.3.8) sha256=b2f1be836e968ccc78ccfce277ea79c72a88633f22306782c16ff23fb415d1e1
@@ -899,7 +892,7 @@ CHECKSUMS
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   pagy (43.8.1) sha256=8f136a4bded93b04c87bc385e8be24c8b5adbaab1c0fac1c4c0c63eddae9c2ff
   parallel (2.3.0) sha256=f75a3e904101ce6a1ccb6b8dc800cbafd42166d83330192438dcf29395167a6f
-  parallel_tests (5.8.0) sha256=181898cbee2ffb1c796274ce31d27f792a421324609bfc7e9b5531d929d91eda
+  parallel_tests (5.9.0) sha256=593169873cfeefe54f233103238cb3b078320e6eac0155d0f1107b39233f98f8
   paranoia (3.1.0) sha256=36574a46e8df663d0da7d9008e987b72a6a9eccee13c058b7094acc810e39f52
   parser (3.3.13.0) sha256=e02f9b63c2fe05b0c68f692ba4df89b3cb113b663964f75d988fbebfd6c3deca
   phonelib (0.10.28) sha256=96dbb0ac9a76e3997825470b47ce7425f4ddf5e9ba52aad40fc465b839bc3dc6
@@ -966,7 +959,7 @@ CHECKSUMS
   spree_api (6.0.0) sha256=1f84ccf0dbe55e4f9e38e9a5db263dd28c79843b026b14fc2abb3e71ef014812
   spree_core (6.0.0) sha256=86fadda3b1fe93a7a031259fe98ca9c4ed5bdfba8dffcbff3e4cef664a0433a6
   spree_dashboard (6.0.0) sha256=6ad4a585f0368f35fdf530d135d04898abec1ed3dca4a19c2072562d05fcec8f
-  spree_dev_tools (0.6.3) sha256=86e47e989c7706740fe7220974c19207feaaec1cd0c7b67d609f50c3cb43c6bb
+  spree_dev_tools (1.0.0) sha256=3cef2feab9f8093ea0acf62ad420439b2f2038d12a375489dc069b95b16fbd72
   spree_emails (6.0.0) sha256=93afbe3eacdb7b2a3b97001d21d3326e498cecd35c9d17fe604aebf4951f20f3
   sqids (0.2.2) sha256=c2d31e0dfb6c32d17c10b59df059a299af93bef716d700ff70d77156df702d36
   sqlite3 (2.10.2-aarch64-linux-gnu) sha256=e9aea2c2b3476fc875dd8a89313a9a2862818519c0186bfb5b56d6f57bb08d98
