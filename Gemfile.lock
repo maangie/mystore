@@ -562,13 +562,13 @@ GEM
       fugit (~> 1.11)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    spree (6.0.0)
-      spree_api (= 6.0.0)
-      spree_core (= 6.0.0)
-    spree_api (6.0.0)
-      spree_core (= 6.0.0)
+    spree (6.0.1)
+      spree_api (= 6.0.1)
+      spree_core (= 6.0.1)
+    spree_api (6.0.1)
+      spree_core (= 6.0.1)
       typelizer (~> 0.11.0)
-    spree_core (6.0.0)
+    spree_core (6.0.1)
       active_storage_validations (>= 1.3, < 4)
       acts-as-taggable-on
       acts_as_list (>= 0.8)
@@ -615,8 +615,8 @@ GEM
       validates_zipcode
       valvat (~> 2.0)
       wannabe_bool
-    spree_dashboard (6.0.0)
-      spree (= 6.0.0)
+    spree_dashboard (6.0.1)
+      spree (= 6.0.1)
     spree_dev_tools (0.6.3)
       awesome_print
       brakeman
@@ -643,8 +643,8 @@ GEM
       simplecov
       spree (>= 5.4.0.alpha)
       timecop
-    spree_emails (6.0.0)
-      spree (= 6.0.0)
+    spree_emails (6.0.1)
+      spree (= 6.0.1)
     sqids (0.2.2)
     sqlite3 (2.10.2-aarch64-linux-gnu)
     sqlite3 (2.10.2-aarch64-linux-musl)
@@ -742,7 +742,7 @@ DEPENDENCIES
   solid_cache
   solid_queue
   spree (~> 6.0.0)
-  spree_dashboard (~> 6.0.0)
+  spree_dashboard (~> 6.0.1)
   spree_dev_tools
   spree_emails (~> 6.0.0)
   sqlite3 (>= 2.1)
@@ -962,12 +962,12 @@ CHECKSUMS
   solid_cable (4.1.0) sha256=828e3d509207b82b4f05f4e9c85f696994710679b52d511aa7f97ebd212d3226
   solid_cache (1.0.10) sha256=bc05a2fb3ac78a6f43cbb5946679cf9db67dd30d22939ededc385cb93e120d41
   solid_queue (1.7.0) sha256=6566b70b801d1c317c81bba7bcdd5677c019afac584a30374b4164002ca356d3
-  spree (6.0.0) sha256=00f988e4118e5f6a430a40b5a9627bc4320ba68c4e662432ba4d518e129a60e7
-  spree_api (6.0.0) sha256=1f84ccf0dbe55e4f9e38e9a5db263dd28c79843b026b14fc2abb3e71ef014812
-  spree_core (6.0.0) sha256=86fadda3b1fe93a7a031259fe98ca9c4ed5bdfba8dffcbff3e4cef664a0433a6
-  spree_dashboard (6.0.0) sha256=6ad4a585f0368f35fdf530d135d04898abec1ed3dca4a19c2072562d05fcec8f
+  spree (6.0.1) sha256=cc53da11dc4406673ae3da5be2304dbad5ae8c37b6396bcc88c5749e66b7e687
+  spree_api (6.0.1) sha256=45e3b89f50ebcd3ad601d9a73b286daf5a23975afa093b8a2b348f603b82ce08
+  spree_core (6.0.1) sha256=a8ea7397aea5f57f85c93c7e9f7e03cd46cdb6f6ab49b0c47ee646a2225e4c27
+  spree_dashboard (6.0.1) sha256=8a0a884d7378860d7fe3917c9089571a948b49f0d9cbcbc13ae28309d7a13a37
   spree_dev_tools (0.6.3) sha256=86e47e989c7706740fe7220974c19207feaaec1cd0c7b67d609f50c3cb43c6bb
-  spree_emails (6.0.0) sha256=93afbe3eacdb7b2a3b97001d21d3326e498cecd35c9d17fe604aebf4951f20f3
+  spree_emails (6.0.1) sha256=f9e8af56d74c1776ef14e60479b6dcaa767b1fab7619895d686e223dcbaa456d
   sqids (0.2.2) sha256=c2d31e0dfb6c32d17c10b59df059a299af93bef716d700ff70d77156df702d36
   sqlite3 (2.10.2-aarch64-linux-gnu) sha256=e9aea2c2b3476fc875dd8a89313a9a2862818519c0186bfb5b56d6f57bb08d98
   sqlite3 (2.10.2-aarch64-linux-musl) sha256=4986fc40cdf21342362b72a941df28e95cfe0e644f3ad2532d948b157c39dbee

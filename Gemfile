@@ -66,7 +66,7 @@ group :test do
 end
 gem "spree", "~> 6.0.0"
 gem "spree_emails", "~> 6.0.0"
-gem "spree_dashboard", "~> 6.0.0"
+gem "spree_dashboard", "~> 6.0.1"
 
 group :development, :test do
   gem "spree_dev_tools"
