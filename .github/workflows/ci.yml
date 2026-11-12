@@ -265,7 +265,9 @@ jobs:
 
       - name: Write storefront/.env.local
         run: |
-          key=$(bin/rails spree:cli:ensure_api_key)
+          # Spree は未取り込みのマイグレーションがあると、起動のたびに標準出力へ警告を出す。キーは最後の行だけ使う
+          key=$(bin/rails spree:cli:ensure_api_key | tail -n 1)
+          case "$key" in pk_*) ;; *) echo "publishable API キーを取れなかった: $key" >&2; exit 1 ;; esac
           cat > storefront/.env.local <<EOF
           SPREE_API_URL=http://localhost:3000
           SPREE_PUBLISHABLE_KEY=$key
