@@ -36,7 +36,8 @@ FileUtils.chdir APP_ROOT do
   env_file = "storefront/.env.local"
   unless File.exist?(env_file)
     puts "\n== Writing #{env_file} =="
-    key = `bin/rails spree:cli:ensure_api_key`.strip
+    # Spree は未取り込みのマイグレーションがあると標準出力へ警告を出すので、キーは最後の行だけ使う
+    key = `bin/rails spree:cli:ensure_api_key`.lines.last.to_s.strip
     if $?.success? && key.start_with?("pk_")
       File.write(env_file, <<~ENV)
         SPREE_API_URL=http://localhost:3000

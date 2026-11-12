@@ -89,7 +89,7 @@ GEM
       activesupport (>= 6.1)
     addressable (2.9.2)
       public_suffix (>= 2.0.2, < 8.0)
-    alba (3.11.0)
+    alba (4.0.3)
     ar_lazy_preload (2.1.2)
     ast (2.4.3)
     async (2.46.0)
@@ -534,7 +534,6 @@ GEM
       ffi (~> 1.12)
       logger
     rubyzip (3.7.0)
-    safely_block (1.0.0)
     sawyer (0.9.3)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
@@ -562,28 +561,26 @@ GEM
       fugit (~> 1.11)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    spree (6.0.0)
-      spree_api (= 6.0.0)
-      spree_core (= 6.0.0)
-    spree_api (6.0.0)
-      spree_core (= 6.0.0)
-      typelizer (~> 0.11.0)
-    spree_core (6.0.0)
+    spree (6.0.4)
+      spree_api (= 6.0.4)
+      spree_core (= 6.0.4)
+    spree_api (6.0.4)
+      spree_core (= 6.0.4)
+      typelizer (~> 0.14.0)
+    spree_core (6.0.4)
       active_storage_validations (>= 1.3, < 4)
       acts-as-taggable-on
       acts_as_list (>= 0.8)
-      alba (~> 3.0)
+      alba (~> 4.0)
       ar_lazy_preload (~> 2.1)
       awesome_nested_set (~> 3.3, >= 3.3.1)
       bcrypt (~> 3.1)
-      benchmark
       cancancan (~> 3.2)
       countries
       doorkeeper (~> 6.0.0.rc2)
       friendly_id (~> 5.2, >= 5.2.1)
       friendly_id-mobility (~> 1.0)
       geocoder
-      highline (>= 2, < 4)
       image_processing (~> 1.2)
       json (< 3)
       json_schemer (~> 2.4)
@@ -598,6 +595,7 @@ GEM
       name_of_person (~> 1.1)
       nokogiri (~> 1.18)
       oj (~> 3.16)
+      ostruct
       pagy (>= 43.6.3)
       paranoia (>= 2.4)
       phonelib (~> 0.10)
@@ -606,8 +604,6 @@ GEM
       rails-i18n (~> 8.0)
       ransack (>= 4.1)
       request_store (~> 1.5)
-      rexml
-      safely_block (>= 0.4, < 2.0)
       sqids (~> 0.2)
       ssrf_filter (~> 1.0)
       stringex
@@ -615,8 +611,8 @@ GEM
       validates_zipcode
       valvat (~> 2.0)
       wannabe_bool
-    spree_dashboard (6.0.0)
-      spree (= 6.0.0)
+    spree_dashboard (6.0.4)
+      spree (= 6.0.4)
     spree_dev_tools (0.6.3)
       awesome_print
       brakeman
@@ -643,8 +639,8 @@ GEM
       simplecov
       spree (>= 5.4.0.alpha)
       timecop
-    spree_emails (6.0.0)
-      spree (= 6.0.0)
+    spree_emails (6.0.4)
+      spree (= 6.0.4)
     sqids (0.2.2)
     sqlite3 (2.10.2-aarch64-linux-gnu)
     sqlite3 (2.10.2-aarch64-linux-musl)
@@ -681,9 +677,9 @@ GEM
     turbo-rails (2.0.23)
       actionpack (>= 7.1.0)
       railties (>= 7.1.0)
-    typelizer (0.11.0)
+    typelizer (0.14.0)
       benchmark
-      railties (>= 6.0.0)
+      railties (>= 6.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unaccent (0.4.0)
@@ -769,7 +765,7 @@ CHECKSUMS
   acts-as-taggable-on (13.0.0) sha256=dca776c6ddebc458d175b57554ad692488e283f27047117e01ed871f1cba6135
   acts_as_list (1.2.6) sha256=8345380900b7bee620c07ad00991ccee59af3d8c9e8574f426e321da2865fdc8
   addressable (2.9.2) sha256=9117c7e7d6ee07230e75ce41fb9401ae55354dc654fcd0e862ba41d539e9a610
-  alba (3.11.0) sha256=a9e7ad2db045490955b2d58cc5a2eeb0db7462ce3c32ec6de1f536e7fe506769
+  alba (4.0.3) sha256=ad9b87b3fa90051504d89c8739a1a3ce8c0db1388eba8b5dad2c2cfac2d897c7
   ar_lazy_preload (2.1.2) sha256=43bb0140ada85c1d605d4430db4d9af40e8e3c5e0aed774eeaefaa95256677c2
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
   async (2.46.0) sha256=34f984733dbf63a997376346451ec995e858cacc3105e86ccfeaf8877b4f490b
@@ -953,7 +949,6 @@ CHECKSUMS
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   ruby-vips (2.3.0) sha256=e685ec02c13969912debbd98019e50492e12989282da5f37d05f5471442f5374
   rubyzip (3.7.0) sha256=65c19294da75297a939006f3516deacc33185fbd721ff1954f7a231db6d3e121
-  safely_block (1.0.0) sha256=bea80e084e620adeada62fd98cf461bbb9888d40dc0f06d337df9d01e1a658e5
   sawyer (0.9.3) sha256=0d0f19298408047037638639fe62f4794483fb04320269169bd41af2bdcf5e41
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   selenium-webdriver (4.51.0) sha256=09edf1b7fc360e0570bac609676f804ed527fe0b2f285e03233561e29b0ec105
@@ -962,12 +957,12 @@ CHECKSUMS
   solid_cable (4.1.0) sha256=828e3d509207b82b4f05f4e9c85f696994710679b52d511aa7f97ebd212d3226
   solid_cache (1.0.10) sha256=bc05a2fb3ac78a6f43cbb5946679cf9db67dd30d22939ededc385cb93e120d41
   solid_queue (1.7.0) sha256=6566b70b801d1c317c81bba7bcdd5677c019afac584a30374b4164002ca356d3
-  spree (6.0.0) sha256=00f988e4118e5f6a430a40b5a9627bc4320ba68c4e662432ba4d518e129a60e7
-  spree_api (6.0.0) sha256=1f84ccf0dbe55e4f9e38e9a5db263dd28c79843b026b14fc2abb3e71ef014812
-  spree_core (6.0.0) sha256=86fadda3b1fe93a7a031259fe98ca9c4ed5bdfba8dffcbff3e4cef664a0433a6
-  spree_dashboard (6.0.0) sha256=6ad4a585f0368f35fdf530d135d04898abec1ed3dca4a19c2072562d05fcec8f
+  spree (6.0.4) sha256=d5a5db8fadb5f504aa11f426f0a9dada9bb82da4cb2d4d95f7cf3a35727c1c39
+  spree_api (6.0.4) sha256=788327f7114d2df407408b91a99a2378e1777cd0d58d1865a113ed344525679c
+  spree_core (6.0.4) sha256=4df221b807ab02a909b90b012285a3d27ca21d25b5ea9569f13a556cd60f2615
+  spree_dashboard (6.0.4) sha256=1742c5c33e3cbbe65985b5ac33e94e7e959946f85b22325daab5b17f96896de4
   spree_dev_tools (0.6.3) sha256=86e47e989c7706740fe7220974c19207feaaec1cd0c7b67d609f50c3cb43c6bb
-  spree_emails (6.0.0) sha256=93afbe3eacdb7b2a3b97001d21d3326e498cecd35c9d17fe604aebf4951f20f3
+  spree_emails (6.0.4) sha256=e1f60af6caacbebf369334c8cb933d70d3a1a7ba4456bbb5a618ddeeac9ed465
   sqids (0.2.2) sha256=c2d31e0dfb6c32d17c10b59df059a299af93bef716d700ff70d77156df702d36
   sqlite3 (2.10.2-aarch64-linux-gnu) sha256=e9aea2c2b3476fc875dd8a89313a9a2862818519c0186bfb5b56d6f57bb08d98
   sqlite3 (2.10.2-aarch64-linux-musl) sha256=4986fc40cdf21342362b72a941df28e95cfe0e644f3ad2532d948b157c39dbee
@@ -992,7 +987,7 @@ CHECKSUMS
   tracking_number (3.0.0) sha256=af478efa2a8eb9d94a4ea2e5505ea0d0736bcf555e400905a4a291b4fae7b92b
   tsort (0.2.0) sha256=9650a793f6859a43b6641671278f79cfead60ac714148aabe4e3f0060480089f
   turbo-rails (2.0.23) sha256=ee0d90733aafff056cf51ff11e803d65e43cae258cc55f6492020ec1f9f9315f
-  typelizer (0.11.0) sha256=6f4bc70c4d4110bae8055d5fe88175f61e2da910c87fc70110f9c9fff5b5c587
+  typelizer (0.14.0) sha256=845f099c115675802d9652fe8a97c16283fa5ebaed580a8ce3b79151d78270c9
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   unaccent (0.4.0) sha256=d9278230016edc5317c053f8e84c1e1dea6827dec028e5481e2294a4e11e7333
   unicode-display_width (3.3.0) sha256=4b7aa66a4b11db50f6f7e98411215cd0dd10eaecb665d36eec5bcacb3fa0b613
