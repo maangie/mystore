@@ -90,8 +90,8 @@ importers:
         specifier: ^2.0.7
         version: 2.0.8(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       swiper:
-        specifier: ^12.1.2
-        version: 12.2.0
+        specifier: ^14.4.0
+        version: 14.4.0
       tailwind-merge:
         specifier: ^3.5.0
         version: 3.7.0
@@ -4351,8 +4351,8 @@ packages:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
     engines: {node: '>=10'}
 
-  swiper@12.2.0:
-    resolution: {integrity: sha512-K8uXsBZU6ME97Ia3xbBge8IRCnR1lOmIILzvY/jGVic7dSTQ530s3uO8RvXbPUtkkXLWIwmZLRPbtDxRWVAFdg==}
+  swiper@14.4.0:
+    resolution: {integrity: sha512-6axnAuBsttFJe0gwsM5tT203/Bts0vcI+FwIX6dqFE4pUFVW6qrdRprNFQVxOYMW7V0S6A/KIqJ6JaPpNN2MCw==}
     engines: {node: '>= 4.7.0'}
 
   symbol-tree@3.2.4:
@@ -8754,7 +8754,7 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  swiper@12.2.0: {}
+  swiper@14.4.0: {}
 
   symbol-tree@3.2.4: {}
 
