@@ -64,7 +64,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.3.14",
     "@playwright/test": "^1.60.0",
-    "@spree/cli": "^2.0.0",
+    "@spree/cli": "^3.6.3",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^6.9.1",
