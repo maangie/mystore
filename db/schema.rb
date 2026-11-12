@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_29_094945) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_12_182724) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -153,6 +153,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_29_094945) do
     t.datetime "deactivated_at"
     t.integer "failed_attempts"
     t.datetime "locked_at"
+    t.datetime "last_active_at"
     t.index ["email"], name: "index_spree_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_spree_admin_users_on_reset_password_token", unique: true
   end
@@ -2012,7 +2013,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_29_094945) do
     t.string "gateway_customer_profile_id"
     t.index ["customer_id"], name: "index_spree_payment_sources_on_customer_id"
     t.index ["payment_method_id"], name: "index_spree_payment_sources_on_payment_method_id"
-    t.index ["type", "gateway_payment_profile_id"], name: "index_payment_sources_on_type_and_gateway_payment_profile_id", unique: true
+    t.index ["type", "gateway_payment_profile_id", "payment_method_id"], name: "index_payment_sources_on_type_profile_id_and_payment_method", unique: true
     t.index ["type"], name: "index_spree_payment_sources_on_type"
   end
 
