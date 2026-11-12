@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@spree/admin-sdk": "^6.0.0",
+    "@spree/admin-sdk": "^6.0.3",
     "@spree/dashboard": "^6.0.0",
     "@spree/dashboard-core": "^6.0.0",
     "@spree/dashboard-ui": "^6.0.3",
