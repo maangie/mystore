@@ -21,8 +21,8 @@ importers:
         specifier: ^16.1.6
         version: 16.4.3(next@16.4.3(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.64.1)(@types/node@26.6.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       '@paypal/react-paypal-js':
-        specifier: ^9.1.1
-        version: 9.3.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: ^10.6.1
+        version: 10.6.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@sentry/nextjs':
         specifier: ^10.38.0
         version: 10.78.0(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(next@16.4.3(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.64.1)(@types/node@26.6.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(webpack@5.107.2(esbuild@0.28.2))
@@ -1073,11 +1073,11 @@ packages:
   '@paypal/paypal-js@11.2.0':
     resolution: {integrity: sha512-/qFVbiz/+9W8bW680g5M72cftZBvpSL7RKnPx5YLxgncjJKZovCL2FbW2Y2s5Jn/zZvrCJIL4TcVztPFOk6aJA==}
 
-  '@paypal/paypal-js@9.8.0':
-    resolution: {integrity: sha512-qZ+jq36Y10MA2E28lnCh4nCNX3uH9s4TKUw6UkjenRkGYJD94z4vkZ2uUKzIYqgCIRZTDlacdU4274API5WzjA==}
+  '@paypal/paypal-js@11.3.0':
+    resolution: {integrity: sha512-Sn0M20QICbV8AeVcMvwQ1QWDX/JaxPgLsxrUFUshYC/W3gMVUZXlpmO/6z3JOhrhk9PU4HZLTYb/F0A/xMwHVw==}
 
-  '@paypal/react-paypal-js@9.3.0':
-    resolution: {integrity: sha512-QSLGVFoymBy0wSjRKLCH8xu829vcLhh1wmmdJ8FYMEHNO05xlCOLWdeWCm6r5PPVRpE0zJfLqxbAxhrN3C2g6g==}
+  '@paypal/react-paypal-js@10.6.1':
+    resolution: {integrity: sha512-0SuNOf6Qo9F4qx4CpPPcV4UMBcyesjt3qgl+RAQU+MKm7fWW682NSvCK6B64Far40Hc+DcvZ7V3dDpKEhg9iLg==}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
       react-dom: ^16.8.0 || ^17 || ^18 || ^19
@@ -5533,13 +5533,13 @@ snapshots:
     dependencies:
       promise-polyfill: 8.3.0
 
-  '@paypal/paypal-js@9.8.0':
+  '@paypal/paypal-js@11.3.0':
     dependencies:
       promise-polyfill: 8.3.0
 
-  '@paypal/react-paypal-js@9.3.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@paypal/react-paypal-js@10.6.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@paypal/paypal-js': 9.8.0
+      '@paypal/paypal-js': 11.3.0
       '@paypal/sdk-constants': 1.0.158
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
