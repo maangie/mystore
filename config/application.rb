@@ -36,5 +36,8 @@ module Mystore
         credentials.dig(:active_record_encryption, key).presence
       config.active_record.encryption[key] = value if value
     end
+
+    # Action Cable はどこからも使っていないので、/cable の WebSocket 口を閉じる
+    config.action_cable.mount_path = nil
   end
 end
