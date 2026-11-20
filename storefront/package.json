@@ -63,7 +63,7 @@
     }
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.14",
+    "@biomejs/biome": "^2.6.8",
     "@playwright/test": "^1.65.0",
     "@spree/cli": "^3.6.3",
     "@tailwindcss/postcss": "^4",
