@@ -184,6 +184,7 @@ GEM
     faraday-net_http (3.5.0)
       net-http (~> 0.5)
     ffaker (2.25.0)
+    ffi (1.17.4)
     ffi (1.17.4-aarch64-linux-gnu)
     ffi (1.17.4-aarch64-linux-musl)
     ffi (1.17.4-arm-linux-gnu)
@@ -305,6 +306,7 @@ GEM
     mini_magick (5.4.0)
       logger
     mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
     minitest (6.1.0)
       drb (~> 2.0)
       prism (>= 1.5, < 3)
@@ -318,6 +320,8 @@ GEM
       money (~> 6.12)
     money (6.19.0)
       i18n (>= 0.6.4, <= 2)
+    mrml (1.10.0)
+      rb_sys
     mrml (1.10.0-aarch64-linux)
     mrml (1.10.0-aarch64-linux-musl)
     mrml (1.10.0-arm-linux)
@@ -346,6 +350,9 @@ GEM
     net-ssh (7.3.8)
       logger
     nio4r (2.7.5)
+    nokogiri (1.19.7)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.19.7-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.7-aarch64-linux-musl)
@@ -452,10 +459,13 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
+    rake-compiler-dock (1.12.0)
     ransack (4.4.4)
       activerecord (>= 7.2)
       activesupport (>= 7.2)
       i18n
+    rb_sys (0.9.130)
+      rake-compiler-dock (= 1.12.0)
     rbs (4.2.0)
       logger
       prism (>= 1.6.0)
@@ -644,6 +654,8 @@ GEM
     spree_emails (6.0.4)
       spree (= 6.0.4)
     sqids (0.2.2)
+    sqlite3 (2.10.2)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (2.10.2-aarch64-linux-gnu)
     sqlite3 (2.10.2-aarch64-linux-musl)
     sqlite3 (2.10.2-arm-linux-gnu)
@@ -666,10 +678,10 @@ GEM
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
     thor (1.5.0)
-    thruster (0.1.27)
-    thruster (0.1.27-aarch64-linux)
-    thruster (0.1.27-arm64-darwin)
-    thruster (0.1.27-x86_64-linux)
+    thruster (0.1.28)
+    thruster (0.1.28-aarch64-linux)
+    thruster (0.1.28-arm64-darwin)
+    thruster (0.1.28-x86_64-linux)
     timecop (0.9.11)
     timeout (0.6.1)
     tracking_number (3.0.0)
@@ -815,6 +827,7 @@ CHECKSUMS
   faraday-http-cache (3.0.0) sha256=44e0b5441825b80aa59446fdb0ceb5a1cf83e9f58fc89752b336d87a991c7994
   faraday-net_http (3.5.0) sha256=2e7094c34e38754ee048cc3df47376f8657005d9375f8473bce1c3b526a22e36
   ffaker (2.25.0) sha256=e485c5adf8195aac55662875b7f515469bca46d77b60d0e7d08db6861bcbec40
+  ffi (1.17.4) sha256=bcd1642e06f0d16fc9e09ac6d49c3a7298b9789bcb58127302f934e437d60acf
   ffi (1.17.4-aarch64-linux-gnu) sha256=b208f06f91ffd8f5e1193da3cae3d2ccfc27fc36fba577baf698d26d91c080df
   ffi (1.17.4-aarch64-linux-musl) sha256=9286b7a615f2676245283aef0a0a3b475ae3aae2bb5448baace630bb77b91f39
   ffi (1.17.4-arm-linux-gnu) sha256=d6dbddf7cb77bf955411af5f187a65b8cd378cb003c15c05697f5feee1cb1564
@@ -862,11 +875,13 @@ CHECKSUMS
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mini_magick (5.4.0) sha256=f120af581d9ed4ec52c57f35a67a605d112bb1d8f582d1415b147fda42d11d78
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
+  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   minitest (6.1.0) sha256=ff373595aa8888631e8a5463986a76b3845346ae6d7fa46e139c1633d418076e
   mobility (1.3.2) sha256=32fbbb0e53118ef42de20daa6ac94dbb758c628874092eba311b968a1e1d757b
   mobility-ransack (1.2.2) sha256=8b480ce5bc4937abc37c17b9922d7e41b8a7064a3207b3a64e5aa71e0cb3332b
   monetize (1.13.0) sha256=0c1f8ae28aa21bbf1a6d014138d9bb0a5ce756c1a99b8b7f7d409c258b01d3b3
   money (6.19.0) sha256=ec936fa1e42f2783719241ed9fd52725d0efa628f928feea1eb5c37d5de7daf3
+  mrml (1.10.0) sha256=cc9b71c712888e23bd5060db8bc9aa31af3da7de9192cea97f35b616d653d68d
   mrml (1.10.0-aarch64-linux) sha256=04f19d6afb5a05e24f46b86eea915f01bc523bcad4cf2facd6789d1a5f8a1734
   mrml (1.10.0-aarch64-linux-musl) sha256=b1d4c12283f8c49806a6a47ac26a55cd947d4dace174f0ca124ec338d41f7cfe
   mrml (1.10.0-arm-linux) sha256=b466262e26720764043c241a82ea562094f5305b655dc811d146f85518c3642e
@@ -884,6 +899,7 @@ CHECKSUMS
   net-smtp (0.5.2) sha256=35103cc04d6b2d94632f9928ede07483c24b70b9c0db1f231fea43909b678f3c
   net-ssh (7.3.8) sha256=16bb1fccc4d9a580decdeea8ddb98e8544df29b7e6ac8cb94d4b379cfe4bee9f
   nio4r (2.7.5) sha256=6c90168e48fb5f8e768419c93abb94ba2b892a1d0602cb06eef16d8b7df1dca1
+  nokogiri (1.19.7) sha256=abe94507c54cb18f872777b16bdca4aad32b1abdc4c52fe843f1c80fbdf992b8
   nokogiri (1.19.7-aarch64-linux-gnu) sha256=8f5e15d299602456406e1f03a9f3456cceb33a0722811e818d2ee2214eb4c84a
   nokogiri (1.19.7-aarch64-linux-musl) sha256=efe0c3602e6e54521bc21c681930ce5568e2d11203de17400710b2b3ca2e4cb4
   nokogiri (1.19.7-arm-linux-gnu) sha256=7fd1907125691aa89e838cc91161761c758b4e17bb32f0dd9b5515a82cc759af
@@ -927,7 +943,9 @@ CHECKSUMS
   railties (8.1.4.1) sha256=ff2ef4b5a62cbc89811f88be11c776e2ed71b14dd012eae6a494d37994aa9782
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
+  rake-compiler-dock (1.12.0) sha256=f13205c2738f3d2053afcd03491a9e4541b22a59a0bfc53fc8bc883bd8188023
   ransack (4.4.4) sha256=f559984eb5714c9834190bc3dc4286f0d4351a21cc10696860c53bce979c7a24
+  rb_sys (0.9.130) sha256=7d486d99c1da02635515deaf9860fc5aea90bb4ab2589b2deec7fdc7d3548615
   rbs (4.2.0) sha256=51f7b886dcc05bc09e10b901daa6a81829f6adc03101d6ca9ea4aac6103e0674
   rdoc (8.1.0) sha256=befc37880a5cfd36dcb176c748b5fd5ee39dd3536a75e81824e4972ce230f60a
   regexp_parser (2.13.1) sha256=5aedb6b7c35688f51e86eef17a15374dfd287c83f4ca644b2c5f3ec50a33b44b
@@ -967,6 +985,7 @@ CHECKSUMS
   spree_dev_tools (1.0.1) sha256=c562cb3a8e7c88430f95dfa435cf7eff6156d7c6646dc4a27cd43edfb8020c26
   spree_emails (6.0.4) sha256=e1f60af6caacbebf369334c8cb933d70d3a1a7ba4456bbb5a618ddeeac9ed465
   sqids (0.2.2) sha256=c2d31e0dfb6c32d17c10b59df059a299af93bef716d700ff70d77156df702d36
+  sqlite3 (2.10.2) sha256=f1ea68cd3287f8a49f39a088ac9e4bd0ef4e7f394c3d4a60dd4c7e44b0566964
   sqlite3 (2.10.2-aarch64-linux-gnu) sha256=e9aea2c2b3476fc875dd8a89313a9a2862818519c0186bfb5b56d6f57bb08d98
   sqlite3 (2.10.2-aarch64-linux-musl) sha256=4986fc40cdf21342362b72a941df28e95cfe0e644f3ad2532d948b157c39dbee
   sqlite3 (2.10.2-arm-linux-gnu) sha256=762f609ef891463226b472d3df66aea84d5466ff4376d3ccf4a059718c4ce9c9
@@ -981,10 +1000,10 @@ CHECKSUMS
   strscan (3.1.8) sha256=aae2db611a225559f21ffbb71765c9a4e60fd262534a9ea84f4f11c7f32f679e
   terminal-table (4.0.0) sha256=f504793203f8251b2ea7c7068333053f0beeea26093ec9962e62ea79f94301d2
   thor (1.5.0) sha256=e3a9e55fe857e44859ce104a84675ab6e8cd59c650a49106a05f55f136425e73
-  thruster (0.1.27) sha256=5fd3855192bb4e8d13db69ae5f70d39f2dfd88fe0394fa372104996edf0bb599
-  thruster (0.1.27-aarch64-linux) sha256=c50789f2dcd4dfa072c4719f99c38dea5d47ebb60ad0cc1fd1996b2266ecfd22
-  thruster (0.1.27-arm64-darwin) sha256=ece0ff0f2ec195008030fbca97067e5e867f4e1f66501fa8b8a3ec3f829bf2bf
-  thruster (0.1.27-x86_64-linux) sha256=7e0e6381011401810b047ff25506e0e38755b2430499ff5586f1a110086981c6
+  thruster (0.1.28) sha256=62672bb4588f49fa764f2e70db108a978818f8976f97ec3fd932d67c9e6b5e39
+  thruster (0.1.28-aarch64-linux) sha256=74cfaab322198dd31c30265e82f092c13f651f24c257025f9d4d89b3f1c7c477
+  thruster (0.1.28-arm64-darwin) sha256=3984853754e3ce3f41564e2ad72e117a77974429086e801ddab33a058bd1dd3f
+  thruster (0.1.28-x86_64-linux) sha256=309c22dca620dc4974bd5672d18afe3d2383899dc712acb1c1d902ad55f2eef4
   timecop (0.9.11) sha256=41284dc6e5041f2184f781ace766f942108c842f8d8c1386a26e6343decc7542
   timeout (0.6.1) sha256=78f57368a7e7bbadec56971f78a3f5ecbcfb59b7fcbb0a3ed6ddc08a5094accb
   tracking_number (3.0.0) sha256=af478efa2a8eb9d94a4ea2e5505ea0d0736bcf555e400905a4a291b4fae7b92b
