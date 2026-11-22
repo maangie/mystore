@@ -50,7 +50,7 @@ export interface CreateWebhookHandlerOptions {
 export function createWebhookHandler(options: CreateWebhookHandlerOptions) {
   const { secret, handlers, toleranceSeconds, waitUntil } = options;
 
-  return async function POST(request: Request) {
+  return async function handleWebhookRequest(request: Request) {
     if (!secret) {
       console.error("[spree-webhook] Secret is not configured");
       return NextResponse.json(
