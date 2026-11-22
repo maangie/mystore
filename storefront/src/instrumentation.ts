@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
+import { sentryDataCollection } from "@/lib/sentry/dataCollection";
 
 export async function register() {
   const dsn = process.env.SENTRY_DSN;
@@ -10,7 +11,7 @@ export async function register() {
   if (dsn) {
     Sentry.init({
       dsn,
-      sendDefaultPii,
+      dataCollection: sentryDataCollection(sendDefaultPii),
       tracesSampleRate: process.env.NODE_ENV === "development" ? 1.0 : 0.1,
     });
   }
