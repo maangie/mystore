@@ -29,7 +29,7 @@
     "@stripe/stripe-js": "^8.7.0",
     "@swc/helpers": "^0.5.24",
     "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
+    "@vercel/speed-insights": "^2.1.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
