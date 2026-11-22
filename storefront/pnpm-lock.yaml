@@ -107,8 +107,8 @@ importers:
         specifier: ^1.65.0
         version: 1.65.0
       '@spree/cli':
-        specifier: ^3.6.3
-        version: 3.6.3
+        specifier: ^3.8.0
+        version: 3.8.0
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.3.5
@@ -390,12 +390,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@clack/core@1.5.1':
-    resolution: {integrity: sha512-iHTrHA8MtVuLl2TfZySmcKv1qO2PoyC9Z7pfSDozEuV5vtY3/wcOPKJXlqJ5Oq2Cx5DDGQGAMVx6HZfRRoVEbQ==}
+  '@clack/core@1.6.0':
+    resolution: {integrity: sha512-4GZynIB2IIe431odxesswvWTCP6orvqd6e2b07b3VFWBQRqUqIHc/EPIZwFoKS692QBp+ooPuXKaJV8g4kXuYA==}
     engines: {node: '>= 20.12.0'}
 
-  '@clack/prompts@1.8.1':
-    resolution: {integrity: sha512-dlT1m5e/0yUL0kRNcQn7yGLVThkgbB0Ga/1AmfDDC/8ik6AIiSf2QLQO2zPYvefsHP0aFgxO93cVLCCfDp7kzQ==}
+  '@clack/prompts@1.9.0':
+    resolution: {integrity: sha512-tEj8X2No2A1c9NDnZECxiiJ8TP3vmFlN9tLlLeSaMqVW4tUmVG2R4qpv/eP4zymWxnymYLkLcIYVV0VcWj3RCQ==}
     engines: {node: '>= 20.12.0'}
 
   '@dotenvx/dotenvx@1.75.1':
@@ -2164,8 +2164,8 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@spree/cli@3.6.3':
-    resolution: {integrity: sha512-gKyhEukLkbO5767d64Wa+yKE8/6EE0crZw5T4VVLwK++uah17nLwiXz5V9j8+S2/v+AVEVsCvY9hNZlq19uuWw==}
+  '@spree/cli@3.8.0':
+    resolution: {integrity: sha512-nQWQji7dmHCzfEP0UEtCbRVjC+JvA/9//l7EYfWR1wM9MhexyA/7TBVSwo+ElK4cYkpJ5pbryHKQCWznFWmN5g==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -4273,6 +4273,10 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
+  sisteransi@2.0.0:
+    resolution: {integrity: sha512-2WCqLdt12eN6ehLI50S2/ZxoowXU3DD1KVPRyVP0WEsFahrGZZmCdq1K59qjJljMRIDTwx1D9YaRK+hDneBUMg==}
+    engines: {node: '>=20'}
+
   smart-buffer@4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
@@ -5082,17 +5086,18 @@ snapshots:
   '@biomejs/cli-win32-x64@2.4.16':
     optional: true
 
-  '@clack/core@1.5.1':
+  '@clack/core@1.6.0':
     dependencies:
-      fast-wrap-ansi: 0.2.2
-      sisteransi: 1.0.5
-
-  '@clack/prompts@1.8.1':
-    dependencies:
-      '@clack/core': 1.5.1
       fast-string-width: 3.0.2
       fast-wrap-ansi: 0.2.2
-      sisteransi: 1.0.5
+      sisteransi: 2.0.0
+
+  '@clack/prompts@1.9.0':
+    dependencies:
+      '@clack/core': 1.6.0
+      fast-string-width: 3.0.2
+      fast-wrap-ansi: 0.2.2
+      sisteransi: 2.0.0
 
   '@dotenvx/dotenvx@1.75.1':
     dependencies:
@@ -6692,9 +6697,9 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@spree/cli@3.6.3':
+  '@spree/cli@3.8.0':
     dependencies:
-      '@clack/prompts': 1.8.1
+      '@clack/prompts': 1.9.0
       commander: 15.1.0
       console-table-printer: 2.16.1
       execa: 10.2.1
@@ -8664,6 +8669,8 @@ snapshots:
   simple-wcswidth@1.1.2: {}
 
   sisteransi@1.0.5: {}
+
+  sisteransi@2.0.0: {}
 
   smart-buffer@4.2.0: {}
 
