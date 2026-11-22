@@ -4,7 +4,7 @@
 
 ## 構成
 
-- Ruby 4.0.9 / Rails 8.1
+- Ruby 4.0.10 / Rails 8.1
 - Spree 6.0.0（`spree`, `spree_emails`, `spree_dashboard`）
 - 管理画面: React 製の Spree Dashboard（`dashboard/` でビルドし、Rails が `/dashboard` で配信する）
 - 認証: Spree 標準の `Spree::Customer`（顧客）と `Spree::AdminUser`（管理者）。Devise は使わない
